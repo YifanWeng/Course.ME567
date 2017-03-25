@@ -17,3 +17,11 @@ a.pinMode(5,'input');
 a.pinMode(6,'input'); 
 led1_state = 0;
 led2_state = 0;
+
+if led1_state == 0
+    a.digitalWrite(3,1);
+    led1_state = a.digitalRead(5);
+else
+    a.digitalWrite(3,0);
+    led1_state = a.digitalRead(5);
+end
