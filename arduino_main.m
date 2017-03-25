@@ -3,6 +3,7 @@ clc
 clear all
 close all
 
+%% Arduino code
 global a;
 global led1_state;
 global led2_state;
