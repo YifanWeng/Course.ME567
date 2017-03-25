@@ -13,9 +13,3 @@ a.pinMode(5,'input');
 a.pinMode(6,'input'); 
 led1_state = 0;
 led2_state = 0;
-
-
-
-
-YI-CHUNG, SU edit
-lasfmsa;
