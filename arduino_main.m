@@ -3,6 +3,9 @@ clc
 clear all
 close all
 
+%% Solving the q_1,q_2,q_3
+
+
 %% Arduino code
 global a;
 global led1_state;
