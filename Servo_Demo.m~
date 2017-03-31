@@ -19,22 +19,11 @@ end
 
 %%
 
-for i = 1:4
-    eval(['s = s',num2str(i),';']);
-    p = readPosition(s)
-    writePosition(s, 0.5);
-end
-
-t=0;
-dt= 0.01;
-traj = 0;
 while(1)
-    traj = 0.5*sin(5*t)+0.5;
+    p0 = sin(0.1*t)
     for i = 1:4
         eval(['s = s',num2str(i),';']);
         p = readPosition(s)
-        writePosition(s, traj);
+        writePosition(s, 0.5);
     end
-    t = t + dt;
-    pause(0.01);
 end
