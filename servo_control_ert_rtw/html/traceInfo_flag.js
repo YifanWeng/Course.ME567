@@ -1,0 +1,55 @@
+function TraceInfoFlag() {
+    this.traceFlag = new Array();
+    this.traceFlag["servo_control.c:58c51"]=1;
+    this.traceFlag["servo_control.c:82c17"]=1;
+    this.traceFlag["servo_control.c:82c39"]=1;
+    this.traceFlag["servo_control.c:99c17"]=1;
+    this.traceFlag["servo_control.c:99c39"]=1;
+    this.traceFlag["servo_control.c:118c25"]=1;
+}
+top.TraceInfoFlag.instance = new TraceInfoFlag();
+function TraceInfoLineFlag() {
+    this.lineTraceFlag = new Array();
+    this.lineTraceFlag["servo_control.c:53"]=1;
+    this.lineTraceFlag["servo_control.c:58"]=1;
+    this.lineTraceFlag["servo_control.c:60"]=1;
+    this.lineTraceFlag["servo_control.c:64"]=1;
+    this.lineTraceFlag["servo_control.c:68"]=1;
+    this.lineTraceFlag["servo_control.c:71"]=1;
+    this.lineTraceFlag["servo_control.c:73"]=1;
+    this.lineTraceFlag["servo_control.c:74"]=1;
+    this.lineTraceFlag["servo_control.c:78"]=1;
+    this.lineTraceFlag["servo_control.c:82"]=1;
+    this.lineTraceFlag["servo_control.c:84"]=1;
+    this.lineTraceFlag["servo_control.c:88"]=1;
+    this.lineTraceFlag["servo_control.c:91"]=1;
+    this.lineTraceFlag["servo_control.c:99"]=1;
+    this.lineTraceFlag["servo_control.c:101"]=1;
+    this.lineTraceFlag["servo_control.c:105"]=1;
+    this.lineTraceFlag["servo_control.c:118"]=1;
+    this.lineTraceFlag["servo_control.c:120"]=1;
+    this.lineTraceFlag["servo_control.c:121"]=1;
+    this.lineTraceFlag["servo_control.c:126"]=1;
+    this.lineTraceFlag["servo_control.c:127"]=1;
+    this.lineTraceFlag["servo_control.c:136"]=1;
+    this.lineTraceFlag["servo_control.c:141"]=1;
+    this.lineTraceFlag["servo_control.c:146"]=1;
+    this.lineTraceFlag["servo_control.c:151"]=1;
+    this.lineTraceFlag["servo_control.c:156"]=1;
+    this.lineTraceFlag["servo_control.c:161"]=1;
+    this.lineTraceFlag["servo_control.c:218"]=1;
+    this.lineTraceFlag["servo_control.c:219"]=1;
+    this.lineTraceFlag["servo_control.c:222"]=1;
+    this.lineTraceFlag["servo_control.c:223"]=1;
+    this.lineTraceFlag["servo_control.c:226"]=1;
+    this.lineTraceFlag["servo_control.c:227"]=1;
+    this.lineTraceFlag["servo_control.c:230"]=1;
+    this.lineTraceFlag["servo_control.c:231"]=1;
+    this.lineTraceFlag["servo_control.c:234"]=1;
+    this.lineTraceFlag["servo_control.c:235"]=1;
+    this.lineTraceFlag["servo_control.c:238"]=1;
+    this.lineTraceFlag["servo_control.c:239"]=1;
+    this.lineTraceFlag["servo_control.c:242"]=1;
+    this.lineTraceFlag["servo_control.c:243"]=1;
+}
+top.TraceInfoLineFlag.instance = new TraceInfoLineFlag();
