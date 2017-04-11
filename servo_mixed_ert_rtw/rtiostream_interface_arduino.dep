@@ -1,0 +1,23 @@
+rtiostream_interface_arduino.o: \
+ /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinotarget/registry/../src/rtiostream_interface_arduino.c \
+ /usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/updown_util.h \
+ /media/pec/DataOne/PROG/EECS567/proj/Course.ME567/servo_mixed_ert_rtw/rtwtypes.h \
+ /usr/local/MATLAB/R2016b/simulink/include/rtw_extmode.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/rtiostream.h \
+ /usr/local/MATLAB/R2016b/toolbox/coder/rtiostream/src/utils/rtiostream_utils.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_types.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_share.h
+
+/usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/updown_util.h:
+
+/media/pec/DataOne/PROG/EECS567/proj/Course.ME567/servo_mixed_ert_rtw/rtwtypes.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/rtw_extmode.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/rtiostream.h:
+
+/usr/local/MATLAB/R2016b/toolbox/coder/rtiostream/src/utils/rtiostream_utils.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_types.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_share.h:

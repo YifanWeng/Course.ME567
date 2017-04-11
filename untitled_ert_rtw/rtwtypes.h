@@ -9,7 +9,7 @@
  *
  * Model version                  : 1.0
  * Simulink Coder version         : 8.11 (R2016b) 25-Aug-2016
- * C/C++ source code generated on : Sat Apr  8 22:32:11 2017
+ * C/C++ source code generated on : Mon Apr 10 17:41:27 2017
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Atmel->AVR

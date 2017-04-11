@@ -1,0 +1,47 @@
+<div class="dead">
+<pre class="code">
+<span class="srcline"><span class="lineno"><a href="1,1" id="srcline1"> 1</a></span><span class="line">function [y,y_simu] = Inv(state,dt,state_old)</span></span>
+<span class="srcline"><span class="lineno"><a href="1,2" id="srcline2"> 2</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="1,3" id="srcline3"> 3</a></span><span class="line">alpha = -2;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,4" id="srcline4"> 4</a></span><span class="line">S=coder.load('simu_xd');</span></span>
+<span class="srcline"><span class="lineno"><a href="1,5" id="srcline5"> 5</a></span><span class="line">if(state == 0)</span></span>
+<span class="srcline"><span class="lineno"><a href="1,6" id="srcline6"> 6</a></span><span class="line">        [y,y_simu] = y_target(state);</span></span>
+<span class="srcline"><span class="lineno"><a href="1,7" id="srcline7"> 7</a></span><span class="line">else</span></span>
+<span class="srcline"><span class="lineno"><a href="1,8" id="srcline8"> 8</a></span><span class="line">        [yd,yd_simu] = y_target(state);</span></span>
+<span class="srcline"><span class="lineno"><a href="1,9" id="srcline9"> 9</a></span><span class="line">        [~,y_old_simu] = y_target(state_old);</span></span>
+<span class="srcline"><span class="lineno"><a href="1,10" id="srcline10">10</a></span><span class="line">        y = yd;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,11" id="srcline11">11</a></span><span class="line">        y_simu = exp(alpha*dt)*(y_old_simu-yd_simu)+yd_simu;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,12" id="srcline12">12</a></span><span class="line">end</span></span>
+<span class="srcline"><span class="lineno"><a href="1,13" id="srcline13">13</a></span><span class="line">y = 45;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,14" id="srcline14">14</a></span><span class="line">end</span></span>
+</pre>
+</div>
+<pre class="code">
+<span class="srcline"><span class="lineno"><a href="1,15" id="srcline15">15</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="1,16" id="srcline16">16</a></span><span class="line"><span class="keyword">function</span> [<span class="var type1" id="S16T1U79">yd</span>,<span class="var type1" id="S17T1U80">yd_simu</span>] = y_target(<span class="var type1" id="S18T2U83">state</span>)</span></span>
+<span class="srcline"><span class="lineno"><a href="1,17" id="srcline17">17</a></span><span class="line"><span class="mxinfo " id="T1:U4"><span class="var type1" id="S16T1U86">yd</span> = <span class="mxinfo " id="T1:U6">zeros(<span class="mxinfo " id="T2:U7">6</span>,1)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,18" id="srcline18">18</a></span><span class="line"><span class="mxinfo " id="T1:U8"><span class="var type1" id="S17T1U93">yd_simu</span> = <span class="mxinfo " id="T1:U10">zeros(<span class="mxinfo " id="T2:U11">6</span>,1)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,19" id="srcline19">19</a></span><span class="line"><span class="mxinfo " id="T3:U12"><span class="var type1" id="S20T3U100">S</span>=<span class="mxinfo " id="T3:U14">coder.load(<span class="string">'simu_xd'</span>)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,20" id="srcline20">20</a></span><span class="line"><span class="keyword">switch</span> <span class="var type1" id="S18T2U107">state</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,21" id="srcline21">21</a></span><span class="line">    <span class="keyword">case</span> <span class="mxinfo " id="T2:U16">0</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,22" id="srcline22">22</a></span><span class="line">        <span class="mxinfo " id="T1:U17"><span class="var type1" id="S16T1U112">yd</span> = <span class="mxinfo " id="T1:U19"><span class="var type1" id="S20T3U114">S</span>.q0</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,23" id="srcline23">23</a></span><span class="line">        <span class="mxinfo " id="T1:U21"><span class="var type1" id="S17T1U118">yd_simu</span> = <span class="mxinfo " id="T1:U23">(<span class="var type1" id="S16T1U123">yd</span>-90)/180*pi</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,24" id="srcline24">24</a></span><span class="line">        <span class="keyword">if</span>(<span class="var type1" id="S17T1U133">yd_simu</span>(6)&gt; 0 ) </span></span>
+<span class="srcline"><span class="lineno"><a href="1,25" id="srcline25">25</a></span><span class="line">            <span class="mxinfo " id="T2:U26"><span class="mxinfo " id="T2:U27"><span class="var type1" id="S17T1U139">yd_simu</span>(<span class="mxinfo " id="T2:U29">6</span>)</span> = <span class="mxinfo " id="T2:U30">0</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,26" id="srcline26">26</a></span><span class="line">        <span class="keyword">end</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,27" id="srcline27">27</a></span><span class="line">    <span class="keyword">case</span> <span class="mxinfo " id="T2:U31">1</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,28" id="srcline28">28</a></span><span class="line">        <span class="mxinfo " id="T1:U32"><span class="var type1" id="S16T1U146">yd</span>=<span class="mxinfo " id="T1:U34"><span class="var type1" id="S20T3U148">S</span>.qd</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,29" id="srcline29">29</a></span><span class="line">        <span class="mxinfo " id="T1:U36"><span class="var type1" id="S17T1U152">yd_simu</span> = <span class="mxinfo " id="T1:U38">(<span class="var type1" id="S16T1U157">yd</span>-90)/180*pi</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,30" id="srcline30">30</a></span><span class="line">        <span class="keyword">if</span>(<span class="var type1" id="S17T1U167">yd_simu</span>(6)&gt; 0 )</span></span>
+<span class="srcline"><span class="lineno"><a href="1,31" id="srcline31">31</a></span><span class="line">            <span class="var type0" id="S17T0U173">yd_simu</span>(6) = 0;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,32" id="srcline32">32</a></span><span class="line">        <span class="keyword">end</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,33" id="srcline33">33</a></span><span class="line">    <span class="keyword">case</span> <span class="mxinfo " id="T2:U41">2</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,34" id="srcline34">34</a></span><span class="line">        <span class="mxinfo " id="T1:U42"><span class="var type1" id="S16T1U180">yd</span> = <span class="mxinfo " id="T1:U44"><span class="var type1" id="S20T3U182">S</span>.q0</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,35" id="srcline35">35</a></span><span class="line">        <span class="mxinfo " id="T1:U46"><span class="var type1" id="S17T1U186">yd_simu</span> = <span class="mxinfo " id="T1:U48">(<span class="var type1" id="S16T1U191">yd</span>-90)/180*pi</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,36" id="srcline36">36</a></span><span class="line">        <span class="keyword">if</span>(<span class="var type1" id="S17T1U201">yd_simu</span>(6)&gt; 0 ) </span></span>
+<span class="srcline"><span class="lineno"><a href="1,37" id="srcline37">37</a></span><span class="line">            <span class="mxinfo " id="T2:U51"><span class="mxinfo " id="T2:U52"><span class="var type1" id="S17T1U207">yd_simu</span>(<span class="mxinfo " id="T2:U54">6</span>)</span> = <span class="mxinfo " id="T2:U55">0</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,38" id="srcline38">38</a></span><span class="line">        <span class="keyword">end</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,39" id="srcline39">39</a></span><span class="line"><span class="keyword">end</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,40" id="srcline40">40</a></span><span class="line"><span class="mxinfo " id="T2:U56"><span class="mxinfo " id="T2:U57"><span class="var type1" id="S17T1U213">yd_simu</span>(<span class="mxinfo " id="T2:U59">2</span>)</span> = <span class="mxinfo " id="T2:U60">-<span class="mxinfo " id="T2:U61"><span class="var type1" id="S17T1U217">yd_simu</span>(<span class="mxinfo " id="T2:U63">2</span>)</span></span></span>; <span class="comment">% the dirction of servo moter is different with the simulation model</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,41" id="srcline41">41</a></span><span class="line"><span class="keyword">end</span></span></span>
+</pre>

@@ -1,0 +1,5 @@
+rt_matrixlib_dbl.o: rt_matrixlib_dbl.c rt_matrixlib.h rtwtypes.h
+
+rt_matrixlib.h:
+
+rtwtypes.h:

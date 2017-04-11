@@ -1,0 +1,124 @@
+ert_main.o: ert_main.c servo_mixed.h rtwtypes.h multiword_types.h \
+ /usr/local/MATLAB/R2016b/simulink/include/rtw_extmode.h \
+ /usr/local/MATLAB/R2016b/simulink/include/sysran_types.h \
+ /usr/local/MATLAB/R2016b/simulink/include/rtw_continuous.h \
+ /media/pec/DataOne/PROG/EECS567/proj/Course.ME567/servo_mixed_ert_rtw/rtwtypes.h \
+ /usr/local/MATLAB/R2016b/simulink/include/rtw_solver.h \
+ /usr/local/MATLAB/R2016b/simulink/include/rtw_continuous.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/dt_info.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_work.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_types.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/simscape/engine/sli/c/nesl_rtw.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/network_engine/c/ne_std.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/common/foundation/core/c/pm_std.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/common/foundation/core/c/pm_system.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/common/foundation/core/c/pm_types.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/common/math/core/c/mc_std.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/common/math/core/c/_mc_std.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/network_engine/c/_ne_std.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/common/foundation/core/c/pm_default_allocator.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/simscape/engine/sli/c/_nesl_rtw.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/simscape/engine/sli/c/nesl_la.h \
+ /media/pec/DataOne/PROG/EECS567/proj/Course.ME567/servo_mixed_ert_rtw/rt_matrixlib.h \
+ /media/pec/DataOne/PROG/EECS567/proj/Course.ME567/servo_mixed_ert_rtw/rtwtypes.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/simscape/engine/sli/c/nesl_sd.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/simscape/engine/sli/c/nesl_sd_type.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/simscape/engine/sli/c/nesl_rtw_utils.h \
+ servo_mixed_273e1ba3_1_gateway.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinobase/blocks/sfcn/include/arduino_servowrite_lct.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinobase/include/io_wrappers.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinobase/blocks/sfcn/include/arduino_blocks_abstraction.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/cores/arduino/Arduino.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/cores/arduino/binary.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/variants/standard/pins_arduino.h \
+ MW_target_hardware_resources.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinotarget/registry/../scheduler/include/arduinoAVRScheduler.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_svr.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_share.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_share.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/updown.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/upsup_public.h
+
+servo_mixed.h:
+
+rtwtypes.h:
+
+multiword_types.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/rtw_extmode.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/sysran_types.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/rtw_continuous.h:
+
+/media/pec/DataOne/PROG/EECS567/proj/Course.ME567/servo_mixed_ert_rtw/rtwtypes.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/rtw_solver.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/rtw_continuous.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/dt_info.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_work.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_types.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/simscape/engine/sli/c/nesl_rtw.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/network_engine/c/ne_std.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/common/foundation/core/c/pm_std.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/common/foundation/core/c/pm_system.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/common/foundation/core/c/pm_types.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/common/math/core/c/mc_std.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/common/math/core/c/_mc_std.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/network_engine/c/_ne_std.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/common/foundation/core/c/pm_default_allocator.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/simscape/engine/sli/c/_nesl_rtw.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/simscape/engine/sli/c/nesl_la.h:
+
+/media/pec/DataOne/PROG/EECS567/proj/Course.ME567/servo_mixed_ert_rtw/rt_matrixlib.h:
+
+/media/pec/DataOne/PROG/EECS567/proj/Course.ME567/servo_mixed_ert_rtw/rtwtypes.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/simscape/engine/sli/c/nesl_sd.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/simscape/engine/sli/c/nesl_sd_type.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/simscape/engine/sli/c/nesl_rtw_utils.h:
+
+servo_mixed_273e1ba3_1_gateway.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinobase/blocks/sfcn/include/arduino_servowrite_lct.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinobase/include/io_wrappers.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinobase/blocks/sfcn/include/arduino_blocks_abstraction.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/cores/arduino/Arduino.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/cores/arduino/binary.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/variants/standard/pins_arduino.h:
+
+MW_target_hardware_resources.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinotarget/registry/../scheduler/include/arduinoAVRScheduler.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_svr.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_share.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_share.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/updown.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/upsup_public.h:

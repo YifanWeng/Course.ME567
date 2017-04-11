@@ -5,7 +5,7 @@
   ;%***********************
       
     nTotData      = 0; %add to this count as we go
-    nTotSects     = 3;
+    nTotSects     = 2;
     sectIdxOffset = 0;
     
     ;%
@@ -59,58 +59,35 @@
       paramMap.sections(1) = section;
       clear section
       
-      section.nData     = 4;
-      section.data(4)  = dumData; %prealloc
-      
-	  ;% servo_control_P.Constant_Value
-	  section.data(1).logicalSrcIdx = 6;
-	  section.data(1).dtTransOffset = 0;
-	
-	  ;% servo_control_P.TransferFcn_A
-	  section.data(2).logicalSrcIdx = 7;
-	  section.data(2).dtTransOffset = 1;
-	
-	  ;% servo_control_P.TransferFcn_C
-	  section.data(3).logicalSrcIdx = 8;
-	  section.data(3).dtTransOffset = 2;
-	
-	  ;% servo_control_P.Constant1_Value
-	  section.data(4).logicalSrcIdx = 9;
-	  section.data(4).dtTransOffset = 3;
-	
-      nTotData = nTotData + section.nData;
-      paramMap.sections(2) = section;
-      clear section
-      
       section.nData     = 6;
       section.data(6)  = dumData; %prealloc
       
 	  ;% servo_control_P.ServoWrite_p1
-	  section.data(1).logicalSrcIdx = 10;
+	  section.data(1).logicalSrcIdx = 6;
 	  section.data(1).dtTransOffset = 0;
 	
 	  ;% servo_control_P.ServoWrite_p1_g
-	  section.data(2).logicalSrcIdx = 11;
+	  section.data(2).logicalSrcIdx = 7;
 	  section.data(2).dtTransOffset = 1;
 	
 	  ;% servo_control_P.ServoWrite_p1_a
-	  section.data(3).logicalSrcIdx = 12;
+	  section.data(3).logicalSrcIdx = 8;
 	  section.data(3).dtTransOffset = 2;
 	
 	  ;% servo_control_P.ServoWrite_p1_a2
-	  section.data(4).logicalSrcIdx = 13;
+	  section.data(4).logicalSrcIdx = 9;
 	  section.data(4).dtTransOffset = 3;
 	
 	  ;% servo_control_P.ServoWrite_p1_m
-	  section.data(5).logicalSrcIdx = 14;
+	  section.data(5).logicalSrcIdx = 10;
 	  section.data(5).dtTransOffset = 4;
 	
 	  ;% servo_control_P.ServoWrite_p1_k
-	  section.data(6).logicalSrcIdx = 15;
+	  section.data(6).logicalSrcIdx = 11;
 	  section.data(6).dtTransOffset = 5;
 	
       nTotData = nTotData + section.nData;
-      paramMap.sections(3) = section;
+      paramMap.sections(2) = section;
       clear section
       
     
@@ -154,12 +131,16 @@
     ;%
     ;% Auto data (servo_control_B)
     ;%
-      section.nData     = 1;
-      section.data(1)  = dumData; %prealloc
+      section.nData     = 2;
+      section.data(2)  = dumData; %prealloc
       
-	  ;% servo_control_B.Sum
+	  ;% servo_control_B.Clock
 	  section.data(1).logicalSrcIdx = 0;
 	  section.data(1).dtTransOffset = 0;
+	
+	  ;% servo_control_B.s
+	  section.data(2).logicalSrcIdx = 1;
+	  section.data(2).dtTransOffset = 1;
 	
       nTotData = nTotData + section.nData;
       sigMap.sections(1) = section;
@@ -183,7 +164,7 @@
   ;%*******************
       
     nTotData      = 0; %add to this count as we go
-    nTotSects     = 0;
+    nTotSects     = 3;
     sectIdxOffset = 1;
     
     ;%
@@ -200,11 +181,53 @@
     ;%
     dworkMap.nSections           = nTotSects;
     dworkMap.sectIdxOffset       = sectIdxOffset;
+      dworkMap.sections(nTotSects) = dumSection; %prealloc
     dworkMap.nTotData            = -1;
     
     ;%
     ;% Auto data (servo_control_DW)
     ;%
+      section.nData     = 2;
+      section.data(2)  = dumData; %prealloc
+      
+	  ;% servo_control_DW.t2
+	  section.data(1).logicalSrcIdx = 0;
+	  section.data(1).dtTransOffset = 0;
+	
+	  ;% servo_control_DW.t1
+	  section.data(2).logicalSrcIdx = 1;
+	  section.data(2).dtTransOffset = 1;
+	
+      nTotData = nTotData + section.nData;
+      dworkMap.sections(1) = section;
+      clear section
+      
+      section.nData     = 1;
+      section.data(1)  = dumData; %prealloc
+      
+	  ;% servo_control_DW.Scope_PWORK.LoggedData
+	  section.data(1).logicalSrcIdx = 2;
+	  section.data(1).dtTransOffset = 0;
+	
+      nTotData = nTotData + section.nData;
+      dworkMap.sections(2) = section;
+      clear section
+      
+      section.nData     = 2;
+      section.data(2)  = dumData; %prealloc
+      
+	  ;% servo_control_DW.is_active_c3_servo_control
+	  section.data(1).logicalSrcIdx = 4;
+	  section.data(1).dtTransOffset = 0;
+	
+	  ;% servo_control_DW.is_c3_servo_control
+	  section.data(2).logicalSrcIdx = 5;
+	  section.data(2).dtTransOffset = 1;
+	
+      nTotData = nTotData + section.nData;
+      dworkMap.sections(3) = section;
+      clear section
+      
     
       ;%
       ;% Non-auto Data (dwork)
@@ -231,8 +254,8 @@
   ;%
 
 
-  targMap.checksum0 = 520085169;
-  targMap.checksum1 = 1458271540;
-  targMap.checksum2 = 3905846639;
-  targMap.checksum3 = 2071523170;
+  targMap.checksum0 = 4165674753;
+  targMap.checksum1 = 731479212;
+  targMap.checksum2 = 1465887570;
+  targMap.checksum3 = 1099750054;
 

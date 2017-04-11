@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'servo_control'.
  *
- * Model version                  : 1.17
+ * Model version                  : 1.20
  * Simulink Coder version         : 8.11 (R2016b) 25-Aug-2016
- * C/C++ source code generated on : Sat Apr  8 23:19:00 2017
+ * C/C++ source code generated on : Mon Apr 10 16:43:03 2017
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Atmel->AVR
@@ -19,11 +19,12 @@
 
 #include "servo_control.h"
 #include "servo_control_private.h"
+#include "servo_control_dt.h"
 
 /* Named constants for Chart: '<Root>/Chart' */
 #define servo_contro_IN_NO_ACTIVE_CHILD ((uint8_T)0U)
 #define servo_control_IN_End           ((uint8_T)1U)
-#define servo_control_IN_Iniital       ((uint8_T)2U)
+#define servo_control_IN_Initial       ((uint8_T)2U)
 #define servo_control_IN_Reach         ((uint8_T)3U)
 
 /* Block signals (auto storage) */
@@ -42,15 +43,13 @@ void servo_control_step(void)
   static const real_T b[6] = { 89.839198456317035, 120.61446583378049,
     120.17240623281748, 129.75101515750868, 89.571432217444425, 45.0 };
 
-  static const real_T c[6] = { 90.0, 99.000000000000014, 90.0, 90.0, 90.0, 108.0
-  };
+  static const int8_T c[6] = { 90, 90, 90, 90, 90, 108 };
 
   real_T rtb_y[6];
-  real_T Clock;
   int16_T i;
 
   /* Clock: '<Root>/Clock' */
-  Clock = servo_control_M->Timing.t[0];
+  servo_control_B.Clock = servo_control_M->Timing.t[0];
 
   /* Chart: '<Root>/Chart' */
   /* Gateway: Chart */
@@ -61,25 +60,25 @@ void servo_control_step(void)
 
     /* Entry Internal: Chart */
     /* Transition: '<S1>:2' */
-    servo_control_DW.is_c3_servo_control = servo_control_IN_Iniital;
+    servo_control_DW.is_c3_servo_control = servo_control_IN_Initial;
 
-    /* Entry 'Iniital': '<S1>:1' */
+    /* Entry 'Initial': '<S1>:1' */
     /* '<S1>:1:1' s = 0; */
     servo_control_B.s = 0.0;
 
     /* '<S1>:1:1' t1=t; */
-    servo_control_DW.t1 = Clock;
+    servo_control_DW.t1 = servo_control_B.Clock;
   } else {
     switch (servo_control_DW.is_c3_servo_control) {
      case servo_control_IN_End:
       /* During 'End': '<S1>:6' */
       break;
 
-     case servo_control_IN_Iniital:
-      /* During 'Iniital': '<S1>:1' */
+     case servo_control_IN_Initial:
+      /* During 'Initial': '<S1>:1' */
       /* '<S1>:4:1' sf_internal_predicateOutput = ... */
       /* '<S1>:4:1' (t-t1)>=5; */
-      if (Clock - servo_control_DW.t1 >= 5.0) {
+      if (servo_control_B.Clock - servo_control_DW.t1 >= 5.0) {
         /* Transition: '<S1>:4' */
         servo_control_DW.is_c3_servo_control = servo_control_IN_Reach;
 
@@ -88,7 +87,7 @@ void servo_control_step(void)
         servo_control_B.s = 1.0;
 
         /* '<S1>:3:1' t2=t */
-        servo_control_DW.t2 = Clock;
+        servo_control_DW.t2 = servo_control_B.Clock;
       }
       break;
 
@@ -96,7 +95,7 @@ void servo_control_step(void)
       /* During 'Reach': '<S1>:3' */
       /* '<S1>:7:1' sf_internal_predicateOutput = ... */
       /* '<S1>:7:1' (t-t2)>=5; */
-      if (Clock - servo_control_DW.t2 >= 5.0) {
+      if (servo_control_B.Clock - servo_control_DW.t2 >= 5.0) {
         /* Transition: '<S1>:7' */
         servo_control_DW.is_c3_servo_control = servo_control_IN_End;
 
@@ -116,7 +115,7 @@ void servo_control_step(void)
   /* '<S2>:1:3' S=coder.load('simu_xd'); */
   /* '<S2>:1:4' if(state == 1) */
   if (servo_control_B.s == 1.0) {
-    /* '<S2>:1:5' y=[S.qd;45]; */
+    /* '<S2>:1:5' y=[S.qd]; */
     for (i = 0; i < 6; i++) {
       rtb_y[i] = b[i];
     }
@@ -159,6 +158,30 @@ void servo_control_step(void)
    *  DataTypeConversion: '<S9>/Data Type Conversion'
    */
   MW_servoWrite(servo_control_P.ServoWrite_p1_k, (uint8_T)rtb_y[5]);
+
+  /* External mode */
+  rtExtModeUploadCheckTrigger(2);
+
+  {                                    /* Sample time: [0.0s, 0.0s] */
+    rtExtModeUpload(0, servo_control_M->Timing.t[0]);
+  }
+
+  {                                    /* Sample time: [0.4s, 0.0s] */
+    rtExtModeUpload(1, ((servo_control_M->Timing.clockTick1) * 0.4));
+  }
+
+  /* signal main to stop simulation */
+  {                                    /* Sample time: [0.0s, 0.0s] */
+    if ((rtmGetTFinal(servo_control_M)!=-1) &&
+        !((rtmGetTFinal(servo_control_M)-servo_control_M->Timing.t[0]) >
+          servo_control_M->Timing.t[0] * (DBL_EPSILON))) {
+      rtmSetErrorStatus(servo_control_M, "Simulation finished");
+    }
+
+    if (rtmGetStopRequested(servo_control_M)) {
+      rtmSetErrorStatus(servo_control_M, "Simulation finished");
+    }
+  }
 
   /* Update absolute time for base rate */
   /* The "clockTick0" counts the number of times the code of this task has
@@ -204,7 +227,30 @@ void servo_control_initialize(void)
   rtsiSetSimTimeStep(&servo_control_M->solverInfo, MAJOR_TIME_STEP);
   rtsiSetSolverName(&servo_control_M->solverInfo,"FixedStepDiscrete");
   rtmSetTPtr(servo_control_M, &servo_control_M->Timing.tArray[0]);
+  rtmSetTFinal(servo_control_M, 20.0);
   servo_control_M->Timing.stepSize0 = 0.4;
+
+  /* External mode info */
+  servo_control_M->Sizes.checksums[0] = (4165674753U);
+  servo_control_M->Sizes.checksums[1] = (731479212U);
+  servo_control_M->Sizes.checksums[2] = (1465887570U);
+  servo_control_M->Sizes.checksums[3] = (1099750054U);
+
+  {
+    static const sysRanDType rtAlwaysEnabled = SUBSYS_RAN_BC_ENABLE;
+    static RTWExtModeInfo rt_ExtModeInfo;
+    static const sysRanDType *systemRan[3];
+    servo_control_M->extModeInfo = (&rt_ExtModeInfo);
+    rteiSetSubSystemActiveVectorAddresses(&rt_ExtModeInfo, systemRan);
+    systemRan[0] = &rtAlwaysEnabled;
+    systemRan[1] = &rtAlwaysEnabled;
+    systemRan[2] = &rtAlwaysEnabled;
+    rteiSetModelMappingInfoPtr(servo_control_M->extModeInfo,
+      &servo_control_M->SpecialInfo.mappingInfo);
+    rteiSetChecksumsPtr(servo_control_M->extModeInfo,
+                        servo_control_M->Sizes.checksums);
+    rteiSetTPtr(servo_control_M->extModeInfo, rtmGetTPtr(servo_control_M));
+  }
 
   /* block I/O */
   (void) memset(((void *) &servo_control_B), 0,
@@ -213,6 +259,23 @@ void servo_control_initialize(void)
   /* states (dwork) */
   (void) memset((void *)&servo_control_DW, 0,
                 sizeof(DW_servo_control_T));
+
+  /* data type transition information */
+  {
+    static DataTypeTransInfo dtInfo;
+    (void) memset((char_T *) &dtInfo, 0,
+                  sizeof(dtInfo));
+    servo_control_M->SpecialInfo.mappingInfo = (&dtInfo);
+    dtInfo.numDataTypes = 14;
+    dtInfo.dataTypeSizes = &rtDataTypeSizes[0];
+    dtInfo.dataTypeNames = &rtDataTypeNames[0];
+
+    /* Block I/O transition table */
+    dtInfo.BTransTable = &rtBTransTable;
+
+    /* Parameters transition table */
+    dtInfo.PTransTable = &rtPTransTable;
+  }
 
   /* Start for S-Function (arduinoservowrite_sfcn): '<S4>/Servo Write' */
   MW_servoAttach(servo_control_P.ServoWrite_p1,

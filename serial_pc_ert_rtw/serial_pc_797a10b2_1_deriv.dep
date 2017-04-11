@@ -1,0 +1,52 @@
+serial_pc_797a10b2_1_deriv.o: serial_pc_797a10b2_1_deriv.c \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/common/foundation/core/c/pm_std.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/common/foundation/core/c/pm_system.h \
+ /media/pec/DataOne/PROG/EECS567/proj/Course.ME567/serial_pc_ert_rtw/rtwtypes.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/common/foundation/core/c/pm_types.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/sm/core/c/sm_std.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/pm_math/c/pm_math_std.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/pm_math/c/pm_math_qr.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/pm_math/c/pm_math_math3d.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/pm_math/c/pm_math_tridiagonal_solve.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/sm/core/c/sm_lin_alg.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/sm/core/c/sm_bezier_utils.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/network_engine/c/ne_std.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/common/math/core/c/mc_std.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/common/math/core/c/_mc_std.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/network_engine/c/_ne_std.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/simscape/compiler/core/c/ne_dae.h \
+ /usr/local/MATLAB/R2016b/toolbox/physmod/sm/ssci/c/sm_ssci_run_time_errors.h
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/common/foundation/core/c/pm_std.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/common/foundation/core/c/pm_system.h:
+
+/media/pec/DataOne/PROG/EECS567/proj/Course.ME567/serial_pc_ert_rtw/rtwtypes.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/common/foundation/core/c/pm_types.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/sm/core/c/sm_std.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/pm_math/c/pm_math_std.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/pm_math/c/pm_math_qr.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/pm_math/c/pm_math_math3d.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/pm_math/c/pm_math_tridiagonal_solve.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/sm/core/c/sm_lin_alg.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/sm/core/c/sm_bezier_utils.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/network_engine/c/ne_std.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/common/math/core/c/mc_std.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/common/math/core/c/_mc_std.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/network_engine/c/_ne_std.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/simscape/compiler/core/c/ne_dae.h:
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/sm/ssci/c/sm_ssci_run_time_errors.h:

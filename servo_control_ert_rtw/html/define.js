@@ -1,22 +1,24 @@
 function CodeDefine() { 
 this.def = new Array();
-this.def["IsrOverrun"] = {file: "ert_main_c.html",line:23,type:"var"};
-this.def["OverrunFlag"] = {file: "ert_main_c.html",line:24,type:"var"};
-this.def["rt_OneStep"] = {file: "ert_main_c.html",line:25,type:"fcn"};
-this.def["main"] = {file: "ert_main_c.html",line:52,type:"fcn"};
-this.def["servo_control_B"] = {file: "servo_control_c.html",line:30,type:"var"};
-this.def["servo_control_DW"] = {file: "servo_control_c.html",line:33,type:"var"};
-this.def["servo_control_M_"] = {file: "servo_control_c.html",line:36,type:"var"};
-this.def["servo_control_M"] = {file: "servo_control_c.html",line:37,type:"var"};
-this.def["servo_control_step"] = {file: "servo_control_c.html",line:40,type:"fcn"};
-this.def["servo_control_initialize"] = {file: "servo_control_c.html",line:184,type:"fcn"};
-this.def["servo_control_terminate"] = {file: "servo_control_c.html",line:247,type:"fcn"};
-this.def["B_servo_control_T"] = {file: "servo_control_h.html",line:51,type:"type"};
-this.def["DW_servo_control_T"] = {file: "servo_control_h.html",line:59,type:"type"};
-this.def["s4yrrMCfxAxSxRLGSj1iNFE_servo_T"] = {file: "servo_control_types_h.html",line:39,type:"type"};
-this.def["P_servo_control_T"] = {file: "servo_control_types_h.html",line:44,type:"type"};
-this.def["RT_MODEL_servo_control_T"] = {file: "servo_control_types_h.html",line:47,type:"type"};
+this.def["IsrOverrun"] = {file: "ert_main_c.html",line:27,type:"var"};
+this.def["OverrunFlag"] = {file: "ert_main_c.html",line:28,type:"var"};
+this.def["rt_OneStep"] = {file: "ert_main_c.html",line:29,type:"fcn"};
+this.def["main"] = {file: "ert_main_c.html",line:57,type:"fcn"};
+this.def["servo_control_B"] = {file: "servo_control_c.html",line:31,type:"var"};
+this.def["servo_control_DW"] = {file: "servo_control_c.html",line:34,type:"var"};
+this.def["servo_control_M_"] = {file: "servo_control_c.html",line:37,type:"var"};
+this.def["servo_control_M"] = {file: "servo_control_c.html",line:38,type:"var"};
+this.def["servo_control_step"] = {file: "servo_control_c.html",line:41,type:"fcn"};
+this.def["servo_control_initialize"] = {file: "servo_control_c.html",line:207,type:"fcn"};
+this.def["servo_control_terminate"] = {file: "servo_control_c.html",line:310,type:"fcn"};
+this.def["B_servo_control_T"] = {file: "servo_control_h.html",line:84,type:"type"};
+this.def["DW_servo_control_T"] = {file: "servo_control_h.html",line:96,type:"type"};
+this.def["sy4LJ1pLMocUdPsrBnA99ZG_servo_T"] = {file: "servo_control_types_h.html",line:40,type:"type"};
+this.def["P_servo_control_T"] = {file: "servo_control_types_h.html",line:45,type:"type"};
+this.def["RT_MODEL_servo_control_T"] = {file: "servo_control_types_h.html",line:48,type:"type"};
 this.def["servo_control_P"] = {file: "servo_control_data_c.html",line:24,type:"var"};
+this.def["chunk_T"] = {file: "multiword_types_h.html",line:27,type:"type"};
+this.def["uchunk_T"] = {file: "multiword_types_h.html",line:28,type:"type"};
 this.def["int8_T"] = {file: "rtwtypes_h.html",line:51,type:"type"};
 this.def["uint8_T"] = {file: "rtwtypes_h.html",line:52,type:"type"};
 this.def["int16_T"] = {file: "rtwtypes_h.html",line:53,type:"type"};
@@ -44,6 +46,12 @@ this.def["cuint16_T"] = {file: "rtwtypes_h.html",line:120,type:"type"};
 this.def["cint32_T"] = {file: "rtwtypes_h.html",line:127,type:"type"};
 this.def["cuint32_T"] = {file: "rtwtypes_h.html",line:134,type:"type"};
 this.def["pointer_T"] = {file: "rtwtypes_h.html",line:152,type:"type"};
+this.def["rtDataTypeSizes"] = {file: "servo_control_dt_h.html",line:23,type:"var"};
+this.def["rtDataTypeNames"] = {file: "servo_control_dt_h.html",line:41,type:"var"};
+this.def["rtBTransitions"] = {file: "servo_control_dt_h.html",line:59,type:"var"};
+this.def["rtBTransTable"] = {file: "servo_control_dt_h.html",line:71,type:"var"};
+this.def["rtPTransitions"] = {file: "servo_control_dt_h.html",line:77,type:"var"};
+this.def["rtPTransTable"] = {file: "servo_control_dt_h.html",line:84,type:"var"};
 this.def["getLoopbackIP"] = {file: "MW_target_hardware_resources_h.html",line:10,type:"var"};
 }
 CodeDefine.instance = new CodeDefine();
@@ -66,10 +74,14 @@ function Html2SrcLink() {
 	this.html2Root["servo_control_types_h.html"] = "servo_control_types_h.html";
 	this.html2SrcPath["servo_control_data_c.html"] = "../servo_control_data.c";
 	this.html2Root["servo_control_data_c.html"] = "servo_control_data_c.html";
+	this.html2SrcPath["multiword_types_h.html"] = "../multiword_types.h";
+	this.html2Root["multiword_types_h.html"] = "multiword_types_h.html";
 	this.html2SrcPath["rtwtypes_h.html"] = "../rtwtypes.h";
 	this.html2Root["rtwtypes_h.html"] = "rtwtypes_h.html";
 	this.html2SrcPath["rtmodel_h.html"] = "../rtmodel.h";
 	this.html2Root["rtmodel_h.html"] = "rtmodel_h.html";
+	this.html2SrcPath["servo_control_dt_h.html"] = "../servo_control_dt.h";
+	this.html2Root["servo_control_dt_h.html"] = "servo_control_dt_h.html";
 	this.html2SrcPath["MW_target_hardware_resources_h.html"] = "../MW_target_hardware_resources.h";
 	this.html2Root["MW_target_hardware_resources_h.html"] = "MW_target_hardware_resources_h.html";
 	this.getLink2Src = function (htmlFileName) {
@@ -87,4 +99,4 @@ function Html2SrcLink() {
 }
 Html2SrcLink.instance = new Html2SrcLink();
 var fileList = [
-"ert_main_c.html","servo_control_c.html","servo_control_h.html","servo_control_private_h.html","servo_control_types_h.html","servo_control_data_c.html","rtwtypes_h.html","rtmodel_h.html","MW_target_hardware_resources_h.html"];
+"ert_main_c.html","servo_control_c.html","servo_control_h.html","servo_control_private_h.html","servo_control_types_h.html","servo_control_data_c.html","multiword_types_h.html","rtwtypes_h.html","rtmodel_h.html","servo_control_dt_h.html","MW_target_hardware_resources_h.html"];

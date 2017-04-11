@@ -1,0 +1,5 @@
+rt_forwardsubrr_dbl.o: rt_forwardsubrr_dbl.c rt_matrixlib.h rtwtypes.h
+
+rt_matrixlib.h:
+
+rtwtypes.h:

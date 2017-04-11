@@ -1,0 +1,31 @@
+updown.o: /usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/updown.c \
+ /media/pec/DataOne/PROG/EECS567/proj/Course.ME567/servo_mixed_ert_rtw/rtwtypes.h \
+ /usr/local/MATLAB/R2016b/simulink/include/rtw_extmode.h \
+ /usr/local/MATLAB/R2016b/simulink/include/sysran_types.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_types.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_share.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_svr.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_work.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/updown_util.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/dt_info.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/upsup_public.h
+
+/media/pec/DataOne/PROG/EECS567/proj/Course.ME567/servo_mixed_ert_rtw/rtwtypes.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/rtw_extmode.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/sysran_types.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_types.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_share.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_svr.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_work.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/updown_util.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/dt_info.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/upsup_public.h:

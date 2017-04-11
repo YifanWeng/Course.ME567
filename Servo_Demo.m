@@ -20,7 +20,7 @@ end
 
 %%
 % angular initialize
-q0 = [0.5;0.55;0.5;0.5;0.5;0.6];
+q0 = [0.5;0.55;0.5;0.5;0.5;0.35];
 for i = 1:6
     eval(['s = s',num2str(i),';']);
     p_r = readPosition(s)
@@ -35,7 +35,7 @@ order = [1;-1;1;1;1];
 
 % while(t < 10)
 % qd = (qd-0.5).*order/pi;
-x = [0;10;20;0;0;0];%[6*sin(2*t);6*cos(2*t)+15;23;0;0;0];
+x = [0;10;25;0;0;0];%[6*sin(2*t);6*cos(2*t)+15;23;0;0;0];
 q_star = InverseKinetics(x)
 q = q_star/(pi);
 qd = order.*q+0.5; % the joint angular from inverse kinematics

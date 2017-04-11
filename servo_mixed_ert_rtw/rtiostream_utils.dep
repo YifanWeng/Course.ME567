@@ -1,0 +1,11 @@
+rtiostream_utils.o: \
+ /usr/local/MATLAB/R2016b/toolbox/coder/rtiostream/src/utils/rtiostream_utils.c \
+ /usr/local/MATLAB/R2016b/toolbox/coder/rtiostream/src/utils/rtiostream_utils.h \
+ /media/pec/DataOne/PROG/EECS567/proj/Course.ME567/servo_mixed_ert_rtw/rtwtypes.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/rtiostream.h
+
+/usr/local/MATLAB/R2016b/toolbox/coder/rtiostream/src/utils/rtiostream_utils.h:
+
+/media/pec/DataOne/PROG/EECS567/proj/Course.ME567/servo_mixed_ert_rtw/rtwtypes.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/rtiostream.h:

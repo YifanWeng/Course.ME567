@@ -1,0 +1,68 @@
+rt_sfcn_helper.o: rt_sfcn_helper.c rt_sfcn_helper.h \
+ /usr/local/MATLAB/R2016b/simulink/include/simstruc.h \
+ /media/pec/DataOne/PROG/EECS567/proj/Course.ME567/servo_mixed_ert_rtw/rtwtypes.h \
+ /usr/local/MATLAB/R2016b/extern/include/tmwtypes.h \
+ /usr/local/MATLAB/R2016b/simulink/include/simstruc_types.h \
+ /usr/local/MATLAB/R2016b/simulink/include/sl_types_def.h \
+ /usr/local/MATLAB/R2016b/simulink/include/rtw_matlogging.h \
+ /usr/local/MATLAB/R2016b/simulink/include/rtw_extmode.h \
+ /usr/local/MATLAB/R2016b/simulink/include/rtw_continuous.h \
+ /usr/local/MATLAB/R2016b/simulink/include/rtw_solver.h \
+ /usr/local/MATLAB/R2016b/simulink/include/sysran_types.h \
+ /usr/local/MATLAB/R2016b/simulink/include/sl_sample_time_defs.h \
+ /usr/local/MATLAB/R2016b/simulink/include/simstruc_types.h \
+ /usr/local/MATLAB/R2016b/simulink/include/solver_zc.h \
+ /usr/local/MATLAB/R2016b/simulink/include/sl_common_types_def.h \
+ /usr/local/MATLAB/R2016b/simulink/include/sl_fixpt.h \
+ /usr/local/MATLAB/R2016b/simulink/include/sl_datatype_access.h \
+ /usr/local/MATLAB/R2016b/simulink/include/sl_prodhwdevicetype.h \
+ /usr/local/MATLAB/R2016b/simulink/include/simulink_solver_api.h \
+ /usr/local/MATLAB/R2016b/simulink/include/simstruc.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/sfcn_bridge.h rtwtypes.h \
+ multiword_types.h
+
+rt_sfcn_helper.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/simstruc.h:
+
+/media/pec/DataOne/PROG/EECS567/proj/Course.ME567/servo_mixed_ert_rtw/rtwtypes.h:
+
+/usr/local/MATLAB/R2016b/extern/include/tmwtypes.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/simstruc_types.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/sl_types_def.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/rtw_matlogging.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/rtw_extmode.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/rtw_continuous.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/rtw_solver.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/sysran_types.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/sl_sample_time_defs.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/simstruc_types.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/solver_zc.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/sl_common_types_def.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/sl_fixpt.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/sl_datatype_access.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/sl_prodhwdevicetype.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/simulink_solver_api.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/simstruc.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/sfcn_bridge.h:
+
+rtwtypes.h:
+
+multiword_types.h:

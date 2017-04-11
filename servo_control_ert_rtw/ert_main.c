@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'servo_control'.
  *
- * Model version                  : 1.17
+ * Model version                  : 1.20
  * Simulink Coder version         : 8.11 (R2016b) 25-Aug-2016
- * C/C++ source code generated on : Sat Apr  8 23:19:00 2017
+ * C/C++ source code generated on : Mon Apr 10 16:43:03 2017
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Atmel->AVR
@@ -19,6 +19,10 @@
 
 #include "servo_control.h"
 #include "rtwtypes.h"
+#include <ext_work.h>
+#include <ext_svr.h>
+#include <ext_share.h>
+#include <updown.h>
 
 volatile int IsrOverrun = 0;
 static boolean_T OverrunFlag = 0;
@@ -47,6 +51,7 @@ void rt_OneStep(void)
 #endif;
 
   OverrunFlag--;
+  rtExtModeCheckEndTrigger();
 }
 
 int main(void)
@@ -57,10 +62,30 @@ int main(void)
   init();
   MW_Arduino_Init();
   rtmSetErrorStatus(servo_control_M, 0);
+
+  /* initialize external mode */
+  rtParseArgsForExtMode(0, NULL);
   servo_control_initialize();
+  sei ();
+
+  /* External mode */
+  rtSetTFinalForExtMode(&rtmGetTFinal(servo_control_M));
+  rtExtModeCheckInit(2);
+
+  {
+    boolean_T rtmStopReq = false;
+    rtExtModeWaitForStartPkt(servo_control_M->extModeInfo, 2, &rtmStopReq);
+    if (rtmStopReq) {
+      rtmSetStopRequested(servo_control_M, true);
+    }
+  }
+
+  rtERTExtModeStartMsg();
+  cli();
   configureArduinoAVRTimer();
   runModel =
-    rtmGetErrorStatus(servo_control_M) == (NULL);
+    (rtmGetErrorStatus(servo_control_M) == (NULL)) && !rtmGetStopRequested
+    (servo_control_M);
 
 #ifndef _MW_ARDUINO_LOOP_
 
@@ -70,10 +95,22 @@ int main(void)
 
   sei ();
   while (runModel) {
+    /* External mode */
+    {
+      boolean_T rtmStopReq = false;
+      rtExtModeOneStep(servo_control_M->extModeInfo, 2, &rtmStopReq);
+      if (rtmStopReq) {
+        rtmSetStopRequested(servo_control_M, true);
+      }
+    }
+
     runModel =
-      rtmGetErrorStatus(servo_control_M) == (NULL);
+      (rtmGetErrorStatus(servo_control_M) == (NULL)) && !rtmGetStopRequested
+      (servo_control_M);
     runModel = runModel && MW_Arduino_Loop();
   }
+
+  rtExtModeShutdown(2);
 
   /* Disable rt_OneStep() here */
 

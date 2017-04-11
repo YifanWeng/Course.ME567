@@ -1,0 +1,56 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   6 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "sfEvent"\
+      Description  "ActiveChartEvent"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_active_c3_serial_pc"\
+      Description  "StateIsActive"\
+      SFName       "is_active_c3_serial_pc"\
+      Path         "is_active_c3_serial_pc"\
+      IsTestPoint  1\
+    }\
+    ChartData {\
+      Name         "is_c3_serial_pc"\
+      Description  "StateActiveChild"\
+      SFName       "is_c3_serial_pc"\
+      Path         "is_c3_serial_pc"\
+      IsTestPoint  1\
+    }\
+    ChartData {\
+      Name         "t2"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "t2"\
+    }\
+    ChartData {\
+      Name         "t1"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "t1"\
+    }\
+    ChartData {\
+      Name         "t3"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "t3"\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

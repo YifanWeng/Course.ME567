@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'servo_control'.
  *
- * Model version                  : 1.17
+ * Model version                  : 1.20
  * Simulink Coder version         : 8.11 (R2016b) 25-Aug-2016
- * C/C++ source code generated on : Sat Apr  8 23:19:00 2017
+ * C/C++ source code generated on : Mon Apr 10 16:43:03 2017
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Atmel->AVR
@@ -20,25 +20,26 @@
 #ifndef RTW_HEADER_servo_control_types_h_
 #define RTW_HEADER_servo_control_types_h_
 #include "rtwtypes.h"
+#include "multiword_types.h"
 
 /* Custom Type definition for MATLAB Function: '<Root>/Inverse Kinematics' */
-#ifndef struct_tag_s4yrrMCfxAxSxRLGSj1iNFE
-#define struct_tag_s4yrrMCfxAxSxRLGSj1iNFE
+#ifndef struct_tag_sy4LJ1pLMocUdPsrBnA99ZG
+#define struct_tag_sy4LJ1pLMocUdPsrBnA99ZG
 
-struct tag_s4yrrMCfxAxSxRLGSj1iNFE
+struct tag_sy4LJ1pLMocUdPsrBnA99ZG
 {
   real_T q0[6];
-  real_T qd[5];
+  real_T qd[6];
 };
 
-#endif                                 /*struct_tag_s4yrrMCfxAxSxRLGSj1iNFE*/
+#endif                                 /*struct_tag_sy4LJ1pLMocUdPsrBnA99ZG*/
 
-#ifndef typedef_s4yrrMCfxAxSxRLGSj1iNFE_servo_T
-#define typedef_s4yrrMCfxAxSxRLGSj1iNFE_servo_T
+#ifndef typedef_sy4LJ1pLMocUdPsrBnA99ZG_servo_T
+#define typedef_sy4LJ1pLMocUdPsrBnA99ZG_servo_T
 
-typedef struct tag_s4yrrMCfxAxSxRLGSj1iNFE s4yrrMCfxAxSxRLGSj1iNFE_servo_T;
+typedef struct tag_sy4LJ1pLMocUdPsrBnA99ZG sy4LJ1pLMocUdPsrBnA99ZG_servo_T;
 
-#endif                                 /*typedef_s4yrrMCfxAxSxRLGSj1iNFE_servo_T*/
+#endif                                 /*typedef_sy4LJ1pLMocUdPsrBnA99ZG_servo_T*/
 
 /* Parameters (auto storage) */
 typedef struct P_servo_control_T_ P_servo_control_T;

@@ -1,0 +1,35 @@
+rt_matrixlib_dbl.o: rt_matrixlib_dbl.c rt_matrixlib.h rtwtypes.h \
+ /usr/local/MATLAB/R2016b/extern/include/tmwtypes.h \
+ /usr/local/MATLAB/R2016b/simulink/include/simstruc_types.h \
+ /media/pec/DataOne/PROG/EECS567/proj/Course.ME567/servo_mixed_ert_rtw/rtwtypes.h \
+ /usr/local/MATLAB/R2016b/simulink/include/sl_types_def.h \
+ /usr/local/MATLAB/R2016b/simulink/include/rtw_matlogging.h \
+ /usr/local/MATLAB/R2016b/simulink/include/rtw_extmode.h \
+ /usr/local/MATLAB/R2016b/simulink/include/rtw_continuous.h \
+ /usr/local/MATLAB/R2016b/simulink/include/rtw_solver.h \
+ /usr/local/MATLAB/R2016b/simulink/include/sysran_types.h \
+ /usr/local/MATLAB/R2016b/simulink/include/sl_sample_time_defs.h
+
+rt_matrixlib.h:
+
+rtwtypes.h:
+
+/usr/local/MATLAB/R2016b/extern/include/tmwtypes.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/simstruc_types.h:
+
+/media/pec/DataOne/PROG/EECS567/proj/Course.ME567/servo_mixed_ert_rtw/rtwtypes.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/sl_types_def.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/rtw_matlogging.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/rtw_extmode.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/rtw_continuous.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/rtw_solver.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/sysran_types.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/sl_sample_time_defs.h:
