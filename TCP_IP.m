@@ -8,23 +8,24 @@ close all
 flag = 1;
 
 if flag
-    %% sender
-    data = sin(1:64);
-    plot(data);
-    %echotcpip('on',30000);
-    t = tcpip('localhost', 30000, 'NetworkRole', 'client');
-    fopen(t);
-    fwrite(t, data);
-    data = sin(1:64);
-    plot(data);
+    %% client
+    tcpipClient = tcpip('localhost', 55000,'NetworkRole','Client');
+    set(tcpipClient,'InputBufferSize',7688);
+    set(tcpipClient,'Timeout',30);
+    fopen(tcpipClient);
+    rawData = fread(tcpipClient,961,'double');
+    fclose(tcpipClient);
+    reshapedData = reshape(rawData,31,31);
+    surf(reshapedData);
 
 
 else
-    %% receiver
-    echotcpip('on',30000);
-    t = tcpip('0.0.0.0', 30000, 'NetworkRole', 'server');
-    fopen(t);
-    data = fread(t, t.BytesAvailable);
-    plot(data);
-
+    %% server
+    data = membrane(1);
+    s = whos('data');
+    tcpipServer = tcpip('0.0.0.0',55000,'NetworkRole','Server');
+    set(tcpipServer,'OutputBufferSize',s.bytes);
+    fopen(tcpipServer);
+    fwrite(tcpipServer,data(:),'double');
+    fclose(tcpipServer);
 end
