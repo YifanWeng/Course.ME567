@@ -14,7 +14,7 @@ l5 = 3;
 l6=15;
 lg = l6/2; % length of grabber
 % angular initialize: rest config
-q0 = [0;0;0.0;0.0;0.0;0.1];
+q0 = [0;-0.1;0.0;0.0;0.0;0.0];
 
 
 % % angular initialize
@@ -33,21 +33,21 @@ order = [1;-1;1;1;1;1]; % the rotation direction of real robot versus the model
 
 % while(t < 10)
 % qd = (qd-0.5).*order/pi;
-xd = [0;20;0;0;0;0];%[6*sin(2*t);6*cos(2*t)+15;23;0;0;0];
+xd = [0;25;20;0;0;0];%[6*sin(2*t);6*cos(2*t)+15;23;0;0;0];
 q_star = InverseKinetics(xd)
 q = q_star/(pi);
 % qd = order.*q+0.5; % the joint angular from inverse kinematics
 % qd(qd<0) = 0;qd(qd>1)=1; % saturation
 qd = q*180.*order(1:5) + 90;
 qd(6) = 45;
+qd(5) = 90;
+qd(1) = 90;
 q0 = q0*180.*order + 90;
 
 save simu_xd qd q0
 
 %%
 servo_mixed
-
-
 
 %%
 % t=0;

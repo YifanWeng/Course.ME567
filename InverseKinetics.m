@@ -15,10 +15,10 @@ while(times<1e4 && err > 1.015 )
     f2 = dotq(t+dt/2,q+1/2*dt*f1,xd,K);
     f3 = dotq(t+dt,q+dt*f2,xd,K);
     q = q + dt/6*(f0+2*f1+2*f2+f3);
-    if(abs(q(2))>pi/3) % joint constraints 
+    if(abs(q(2))>pi/4) % joint constraints 
         q(2) = q(2)/2;
     end
-    if(abs(q(3))<pi/9) 
+    if(abs(q(3))<pi/6) 
         q(3) = q(3)*2;
     end
     xe = forward(q);

@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'Subsystem'.
  *
- * Model version                  : 1.44
+ * Model version                  : 1.78
  * Simulink Coder version         : 8.11 (R2016b) 25-Aug-2016
- * C/C++ source code generated on : Mon Apr 10 23:53:40 2017
+ * C/C++ source code generated on : Tue Apr 11 02:45:16 2017
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Atmel->AVR
@@ -73,7 +73,9 @@ typedef struct tag_sy4LJ1pLMocUdPsrBnA99ZG sy4LJ1pLMocUdPsrBnA99ZG;
 
 /* Block signals and states (auto storage) for system '<Root>' */
 typedef struct {
+  real_T yd[6];
   real_T yd_simu[6];
+  real_T y_simu[6];                    /* '<S1>/Inverse Kinematics1' */
   real_T s;                            /* '<S1>/Chart' */
   real_T dt;                           /* '<S1>/Chart' */
   real_T s_old;                        /* '<S1>/Chart' */
