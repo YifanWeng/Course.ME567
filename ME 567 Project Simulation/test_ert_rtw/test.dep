@@ -1,0 +1,68 @@
+test.o: test.c test.h rtwtypes.h \
+ /usr/local/MATLAB/R2016b/simulink/include/rtw_extmode.h \
+ /usr/local/MATLAB/R2016b/simulink/include/sysran_types.h \
+ /usr/local/MATLAB/R2016b/simulink/include/rtw_continuous.h \
+ /media/pec/DataOne/PROG/EECS567/proj/Course.ME567/test_ert_rtw/rtwtypes.h \
+ /usr/local/MATLAB/R2016b/simulink/include/rtw_solver.h \
+ /usr/local/MATLAB/R2016b/simulink/include/rtw_continuous.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/dt_info.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_work.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_types.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinobase/blocks/sfcn/include/arduino_servowrite_lct.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinobase/include/io_wrappers.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinobase/blocks/sfcn/include/arduino_blocks_abstraction.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/cores/arduino/Arduino.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/cores/arduino/binary.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/variants/standard/pins_arduino.h \
+ test_types.h multiword_types.h MW_target_hardware_resources.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinotarget/registry/../scheduler/include/arduinoAVRScheduler.h \
+ test_private.h test_dt.h \
+ /usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_types.h
+
+test.h:
+
+rtwtypes.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/rtw_extmode.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/sysran_types.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/rtw_continuous.h:
+
+/media/pec/DataOne/PROG/EECS567/proj/Course.ME567/test_ert_rtw/rtwtypes.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/rtw_solver.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/rtw_continuous.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/dt_info.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_work.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_types.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinobase/blocks/sfcn/include/arduino_servowrite_lct.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinobase/include/io_wrappers.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinobase/blocks/sfcn/include/arduino_blocks_abstraction.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/cores/arduino/Arduino.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/cores/arduino/binary.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/variants/standard/pins_arduino.h:
+
+test_types.h:
+
+multiword_types.h:
+
+MW_target_hardware_resources.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinotarget/registry/../scheduler/include/arduinoAVRScheduler.h:
+
+test_private.h:
+
+test_dt.h:
+
+/usr/local/MATLAB/R2016b/rtw/c/src/ext_mode/common/ext_types.h:
