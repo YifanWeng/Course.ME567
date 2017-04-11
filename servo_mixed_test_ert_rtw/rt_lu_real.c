@@ -1,6 +1,6 @@
 /* Copyright 1994-2010 The MathWorks, Inc.
  *
- * File: rt_lu_real.c
+ * File: rt_lu_real.c     
  *
  * Abstract:
  *      Real-Time Workshop support routine for lu_real
@@ -14,9 +14,9 @@
  * Abstract: A is real.
  *
  */
-void rt_lu_real(real_T *A,             /* in and out                         */
-                const int_T n,         /* number or rows = number of columns */
-                int32_T *piv)          /* pivote vector                      */
+void rt_lu_real(real_T      *A,    /* in and out                         */
+                const int_T n,     /* number or rows = number of columns */
+                int32_T     *piv)  /* pivote vector                      */
 {
   int_T k;
 
@@ -35,13 +35,10 @@ void rt_lu_real(real_T *A,             /* in and out                         */
      */
     {
       int_T i;
-      real_T Amax = fabs(A[p+kn]);     /* assume diag is max */
+      real_T Amax = fabs(A[p+kn]);      /* assume diag is max */
       for (i = k+1; i < n; i++) {
         real_T q = fabs(A[i+kn]);
-        if (q > Amax) {
-          p = i;
-          Amax = q;
-        }
+        if (q > Amax) {p = i; Amax = q;}
       }
     }
 
@@ -52,22 +49,18 @@ void rt_lu_real(real_T *A,             /* in and out                         */
       for (j = 0; j < n; j++) {
         real_T t;
         const int_T j_n = j*n;
-        t = A[p+j_n];
-        A[p+j_n] = A[k+j_n];
-        A[k+j_n] = t;
+        t = A[p+j_n]; A[p+j_n] = A[k+j_n]; A[k+j_n] = t;
       }
-
       /* swap pivot row indices */
-      t1 = piv[p];
-      piv[p] = piv[k];
-      piv[k] = t1;
+      t1 = piv[p]; piv[p] = piv[k]; piv[k] = t1;
     }
 
     /* column reduction */
     {
       real_T Adiag = A[k+kn];
       int_T i,j;
-      if (Adiag != 0.0) {              /* non-zero diagonal entry */
+      if (Adiag != 0.0) {               /* non-zero diagonal entry */
+
         /* divide lower triangular part of column by max */
         Adiag = 1.0/Adiag;
         for (i = k+1; i < n; i++) {

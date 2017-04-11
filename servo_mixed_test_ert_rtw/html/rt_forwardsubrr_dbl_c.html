@@ -15,7 +15,7 @@
 <tr name="2" id="2">
 <td><a id="l2" class='ln'>2</a></td><td><span class="ct"> *</span></td></tr>
 <tr name="3" id="3">
-<td><a id="l3" class='ln'>3</a></td><td><span class="ct"> * File: rt_forwardsubrr_dbl.c</span></td></tr>
+<td><a id="l3" class='ln'>3</a></td><td><span class="ct"> * File: rt_forwardsubrr_dbl.c     </span></td></tr>
 <tr name="4" id="4">
 <td><a id="l4" class='ln'>4</a></td><td><span class="ct"> *</span></td></tr>
 <tr name="5" id="5">
@@ -37,7 +37,7 @@
 <tr name="13" id="13">
 <td><a id="l13" class='ln'>13</a></td><td><span class="ct">/* Function: rt_ForwardSubstitutionRR_Dbl ======================================</span></td></tr>
 <tr name="14" id="14">
-<td><a id="l14" class='ln'>14</a></td><td><span class="ct"> * Abstract: Forward substitution: solving Lx=b</span></td></tr>
+<td><a id="l14" class='ln'>14</a></td><td><span class="ct"> * Abstract: Forward substitution: solving Lx=b </span></td></tr>
 <tr name="15" id="15">
 <td><a id="l15" class='ln'>15</a></td><td><span class="ct"> *           L: Real, double</span></td></tr>
 <tr name="16" id="16">
@@ -55,37 +55,37 @@
 <tr name="22" id="22">
 <td><a id="l22" class='ln'>22</a></td><td><span class="ct"> */</span></td></tr>
 <tr name="23" id="23">
-<td><a id="l23" class='ln'>23</a></td><td><span class="kw">void</span> <a id="23c6" class="tk">rt_ForwardSubstitutionRR_Dbl</a>(<a id="23c35" class="tk">real_T</a> <a id="23c42" class="tk">*</a><a id="23c43" class="tk">pL</a>,</td></tr>
+<td><a id="l23" class='ln'>23</a></td><td><span class="kw">void</span> <a id="23c6" class="tk">rt_ForwardSubstitutionRR_Dbl</a>(<a id="23c35" class="tk">real_T</a>        <a id="23c49" class="tk">*</a><a id="23c50" class="tk">pL</a>,</td></tr>
 <tr name="24" id="24">
-<td><a id="l24" class='ln'>24</a></td><td>  <span class="kw">const</span> <a id="24c9" class="tk">real_T</a> <a id="24c16" class="tk">*</a><a id="24c17" class="tk">pb</a>,</td></tr>
+<td><a id="l24" class='ln'>24</a></td><td>                                  <span class="kw">const</span> <a id="24c41" class="tk">real_T</a>  <a id="24c49" class="tk">*</a><a id="24c50" class="tk">pb</a>,</td></tr>
 <tr name="25" id="25">
-<td><a id="l25" class='ln'>25</a></td><td>  <a id="25c3" class="tk">real_T</a> <a id="25c10" class="tk">*</a><a id="25c11" class="tk">x</a>,</td></tr>
+<td><a id="l25" class='ln'>25</a></td><td>                                  <a id="25c35" class="tk">real_T</a>        <a id="25c49" class="tk">*</a><a id="25c50" class="tk">x</a>,</td></tr>
 <tr name="26" id="26">
-<td><a id="l26" class='ln'>26</a></td><td>  <a id="26c3" class="tk">int_T</a> <a id="26c9" class="tk">N</a>,</td></tr>
+<td><a id="l26" class='ln'>26</a></td><td>                                  <a id="26c35" class="tk">int_T</a>          <a id="26c50" class="tk">N</a>,</td></tr>
 <tr name="27" id="27">
-<td><a id="l27" class='ln'>27</a></td><td>  <a id="27c3" class="tk">int_T</a> <a id="27c9" class="tk">P</a>,</td></tr>
+<td><a id="l27" class='ln'>27</a></td><td>                                  <a id="27c35" class="tk">int_T</a>          <a id="27c50" class="tk">P</a>,</td></tr>
 <tr name="28" id="28">
-<td><a id="l28" class='ln'>28</a></td><td>  <span class="kw">const</span> <a id="28c9" class="tk">int32_T</a> <a id="28c17" class="tk">*</a><a id="28c18" class="tk">piv</a>,</td></tr>
+<td><a id="l28" class='ln'>28</a></td><td>                                  <span class="kw">const</span> <a id="28c41" class="tk">int32_T</a> <a id="28c49" class="tk">*</a><a id="28c50" class="tk">piv</a>,</td></tr>
 <tr name="29" id="29">
-<td><a id="l29" class='ln'>29</a></td><td>  <a id="29c3" class="tk">boolean_T</a> <a id="29c13" class="tk">unit_lower</a>)</td></tr>
+<td><a id="l29" class='ln'>29</a></td><td>                                  <a id="29c35" class="tk">boolean_T</a>      <a id="29c50" class="tk">unit_lower</a>)</td></tr>
 <tr name="30" id="30">
-<td><a id="l30" class='ln'>30</a></td><td><span class="br">{</span></td></tr>
+<td><a id="l30" class='ln'>30</a></td><td><span class="br">{</span>  </td></tr>
 <tr name="31" id="31">
 <td><a id="l31" class='ln'>31</a></td><td>  <span class="ct">/* Real inputs: */</span></td></tr>
 <tr name="32" id="32">
 <td><a id="l32" class='ln'>32</a></td><td>  <a id="32c3" class="tk">int_T</a> <a id="32c9" class="tk">i</a>, <a id="32c12" class="tk">k</a>;</td></tr>
 <tr name="33" id="33">
-<td><a id="l33" class='ln'>33</a></td><td>  <span class="kw">for</span> (<a id="33c8" class="tk">k</a>=0; <a id="33c13" class="tk">k</a><a id="33c14" class="tk">&lt;</a><a id="33c15" class="tk">P</a>; <a id="33c18" class="tk">k</a><a id="33c19" class="tk">++</a>) <span class="br">{</span></td></tr>
+<td><a id="l33" class='ln'>33</a></td><td>  <span class="kw">for</span>(<a id="33c7" class="tk">k</a>=0; <a id="33c12" class="tk">k</a><a id="33c13" class="tk">&lt;</a><a id="33c14" class="tk">P</a>; <a id="33c17" class="tk">k</a><a id="33c18" class="tk">++</a>) <span class="br">{</span></td></tr>
 <tr name="34" id="34">
 <td><a id="l34" class='ln'>34</a></td><td>    <a id="34c5" class="tk">real_T</a> <a id="34c12" class="tk">*</a><a id="34c13" class="tk">pLcol</a> = <a id="34c21" class="tk">pL</a>;</td></tr>
 <tr name="35" id="35">
-<td><a id="l35" class='ln'>35</a></td><td>    <span class="kw">for</span> (<a id="35c10" class="tk">i</a>=0; <a id="35c15" class="tk">i</a><a id="35c16" class="tk">&lt;</a><a id="35c17" class="tk">N</a>; <a id="35c20" class="tk">i</a><a id="35c21" class="tk">++</a>) <span class="br">{</span></td></tr>
+<td><a id="l35" class='ln'>35</a></td><td>    <span class="kw">for</span>(<a id="35c9" class="tk">i</a>=0; <a id="35c14" class="tk">i</a><a id="35c15" class="tk">&lt;</a><a id="35c16" class="tk">N</a>; <a id="35c19" class="tk">i</a><a id="35c20" class="tk">++</a>) <span class="br">{</span></td></tr>
 <tr name="36" id="36">
 <td><a id="l36" class='ln'>36</a></td><td>      <a id="36c7" class="tk">real_T</a> <a id="36c14" class="tk">*</a><a id="36c15" class="tk">xj</a> = <a id="36c20" class="tk">x</a> <a id="36c22" class="tk">+</a> <a id="36c24" class="tk">k</a><a id="36c25" class="tk">*</a><a id="36c26" class="tk">N</a>;</td></tr>
 <tr name="37" id="37">
 <td><a id="l37" class='ln'>37</a></td><td>      <a id="37c7" class="tk">real_T</a> <a id="37c14" class="tk">s</a> = 0.0;</td></tr>
 <tr name="38" id="38">
-<td><a id="l38" class='ln'>38</a></td><td>      <a id="38c7" class="tk">real_T</a> <a id="38c14" class="tk">*</a><a id="38c15" class="tk">pLrow</a> = <a id="38c23" class="tk">pLcol</a><a id="38c28" class="tk">++</a>;         <span class="ct">/* access current row of L */</span></td></tr>
+<td><a id="l38" class='ln'>38</a></td><td>      <a id="38c7" class="tk">real_T</a> <a id="38c14" class="tk">*</a><a id="38c15" class="tk">pLrow</a> = <a id="38c23" class="tk">pLcol</a><a id="38c28" class="tk">++</a>;          <span class="ct">/* access current row of L */</span></td></tr>
 <tr name="39" id="39">
 <td><a id="l39" class='ln'>39</a></td><td></td></tr>
 <tr name="40" id="40">
@@ -93,7 +93,7 @@
 <tr name="41" id="41">
 <td><a id="l41" class='ln'>41</a></td><td>        <a id="41c9" class="tk">int_T</a> <a id="41c15" class="tk">j</a> = <a id="41c19" class="tk">i</a>;</td></tr>
 <tr name="42" id="42">
-<td><a id="l42" class='ln'>42</a></td><td>        <span class="kw">while</span> (<a id="42c16" class="tk">j</a><a id="42c17" class="tk">--</a> <a id="42c20" class="tk">&gt;</a> 0) <span class="br">{</span></td></tr>
+<td><a id="l42" class='ln'>42</a></td><td>        <span class="kw">while</span>(<a id="42c15" class="tk">j</a><a id="42c16" class="tk">--</a> <a id="42c19" class="tk">&gt;</a> 0) <span class="br">{</span></td></tr>
 <tr name="43" id="43">
 <td><a id="l43" class='ln'>43</a></td><td>          <a id="43c11" class="tk">s</a> <a id="43c13" class="tk">+=</a> <a id="43c16" class="tk">*</a><a id="43c17" class="tk">pLrow</a> <a id="43c23" class="tk">*</a> <a id="43c25" class="tk">*</a><a id="43c26" class="tk">xj</a>;</td></tr>
 <tr name="44" id="44">
@@ -119,19 +119,17 @@
 <tr name="54" id="54">
 <td><a id="l54" class='ln'>54</a></td><td>    <span class="br">}</span></td></tr>
 <tr name="55" id="55">
-<td><a id="l55" class='ln'>55</a></td><td></td></tr>
+<td><a id="l55" class='ln'>55</a></td><td>    <a id="55c5" class="tk">pb</a> <a id="55c8" class="tk">+=</a> <a id="55c11" class="tk">N</a>;</td></tr>
 <tr name="56" id="56">
-<td><a id="l56" class='ln'>56</a></td><td>    <a id="56c5" class="tk">pb</a> <a id="56c8" class="tk">+=</a> <a id="56c11" class="tk">N</a>;</td></tr>
+<td><a id="l56" class='ln'>56</a></td><td>  <span class="br">}</span></td></tr>
 <tr name="57" id="57">
-<td><a id="l57" class='ln'>57</a></td><td>  <span class="br">}</span></td></tr>
+<td><a id="l57" class='ln'>57</a></td><td><span class="br">}</span></td></tr>
 <tr name="58" id="58">
-<td><a id="l58" class='ln'>58</a></td><td><span class="br">}</span></td></tr>
+<td><a id="l58" class='ln'>58</a></td><td></td></tr>
 <tr name="59" id="59">
-<td><a id="l59" class='ln'>59</a></td><td></td></tr>
+<td><a id="l59" class='ln'>59</a></td><td><span class="ct">/* [EOF] rt_forwardsubrr_dbl.c */</span></td></tr>
 <tr name="60" id="60">
-<td><a id="l60" class='ln'>60</a></td><td><span class="ct">/* [EOF] rt_forwardsubrr_dbl.c */</span></td></tr>
-<tr name="61" id="61">
-<td><a id="l61" class='ln'>61</a></td><td></td></tr>
+<td><a id="l60" class='ln'>60</a></td><td></td></tr>
 </table>
 </pre>
 </body>

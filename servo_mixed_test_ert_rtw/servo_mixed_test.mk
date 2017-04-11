@@ -2,7 +2,7 @@
 ## Makefile generated for Simulink model 'servo_mixed_test'. 
 ## 
 ## Makefile     : servo_mixed_test.mk
-## Generated on : Mon Apr 10 23:33:09 2017
+## Generated on : Tue Apr 11 02:57:39 2017
 ## MATLAB Coder version: 3.2 (R2016b)
 ## 
 ## Build Info:
@@ -37,6 +37,15 @@ CLASSIC_INTERFACE         = 0
 TGT_FCN_LIB               = None
 MODELREF_LINK_RSPFILE_NAME = servo_mixed_test_ref.rsp
 RELATIVE_PATH_TO_ANCHOR   = ..
+LIBSM_SSCI_ERT_OBJS       = 
+LIBSM_ERT_OBJS            = 
+LIBPM_MATH_ERT_OBJS       = 
+LIBSSC_SLI_ERT_OBJS       = 
+LIBSSC_CORE_ERT_OBJS      = 
+LIBNE_ERT_OBJS            = 
+LIBMC_ERT_OBJS            = 
+LIBEX_ERT_OBJS            = 
+LIBPM_ERT_OBJS            = 
 
 ###########################################################################
 ## TOOLCHAIN SPECIFICATIONS
@@ -220,7 +229,7 @@ BUILD_TYPE = "Top-Level Standalone Executable"
 ## INCLUDE PATHS
 ###########################################################################
 
-INCLUDES_BUILDINFO = -I$(START_DIR)/servo_mixed_test_ert_rtw -I$(START_DIR) -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils -I$(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino -I$(ARDUINO_ROOT)/hardware/arduino/avr/variants/standard -I$(ARDUINO_ROOT)/libraries/Servo/src -I/root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinotarget/registry/../include -I/root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinotarget/registry/../scheduler/include -I/root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinobase/include -I$(ARDUINO_ROOT)/hardware/tools/avr/avr/include/avr -I/root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/shared/externalmode_daemon/include
+INCLUDES_BUILDINFO = -I$(MATLAB_ROOT)/simulink/include/sf_runtime -I$(START_DIR)/servo_mixed_test_ert_rtw -I$(START_DIR) -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils -I$(MATLAB_ROOT)/toolbox/physmod/sm/ssci/c -I$(MATLAB_ROOT)/toolbox/physmod/sm/core/c -I$(MATLAB_ROOT)/toolbox/physmod/pm_math/c -I$(MATLAB_ROOT)/toolbox/physmod/simscape/engine/sli/c -I$(MATLAB_ROOT)/toolbox/physmod/simscape/engine/core/c -I$(MATLAB_ROOT)/toolbox/physmod/simscape/compiler/core/c -I$(MATLAB_ROOT)/toolbox/physmod/network_engine/c -I$(MATLAB_ROOT)/toolbox/physmod/common/math/core/c -I$(MATLAB_ROOT)/toolbox/physmod/common/lang/core/c -I$(MATLAB_ROOT)/toolbox/physmod/common/external/library/c -I$(MATLAB_ROOT)/toolbox/physmod/common/foundation/core/c -I$(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino -I$(ARDUINO_ROOT)/hardware/arduino/avr/variants/standard -I$(ARDUINO_ROOT)/libraries/Servo/src -I/root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinotarget/registry/../include -I/root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinotarget/registry/../scheduler/include -I/root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinobase/include -I$(ARDUINO_ROOT)/hardware/tools/avr/avr/include/avr -I/root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/shared/externalmode_daemon/include
 
 INCLUDES = $(INCLUDES_BUILDINFO)
 
@@ -228,10 +237,10 @@ INCLUDES = $(INCLUDES_BUILDINFO)
 ## DEFINES
 ###########################################################################
 
-DEFINES_ = -DMODEL=servo_mixed_test -DNUMST=2 -DNCSTATES=0 -DHAVESTDIO -DUNIX -DON_TARGET_WAIT_FOR_START=1 -DONESTEPFCN=1 -DEXT_MODE=1 -DTERMFCN=1 -DMAT_FILE=0 -DMULTI_INSTANCE_CODE=0 -DINTEGER_CODE=0 -DMT=0 -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DRT -DUSE_RTMODEL -DERT -DTID01EQ=1 -D__MW_TARGET_USE_HARDWARE_RESOURCES_H__ -DEXIT_FAILURE=1 -DEXTMODE_DISABLEPRINTF -DEXTMODE_DISABLETESTING -DEXTMODE_DISABLE_ARGS_PROCESSING=1 -DSTACK_SIZE=64 -DMW_TIMERID=1 -DMW_PRESCALAR=256 -DMW_TIMERCOUNT=46786 -DMW_SCHEDULERCOUNTER=1 -D_RTT_BAUDRATE_SERIAL0_=9600 -D_RTT_ANALOG_REF_=0
+DEFINES_ = -DMODEL=servo_mixed_test -DNUMST=2 -DNCSTATES=0 -DHAVESTDIO -DUNIX -DON_TARGET_WAIT_FOR_START=1 -DONESTEPFCN=1 -DEXT_MODE=1 -DTERMFCN=1 -DMAT_FILE=0 -DMULTI_INSTANCE_CODE=0 -DINTEGER_CODE=0 -DMT=0 -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTID01EQ=1 -D__MW_TARGET_USE_HARDWARE_RESOURCES_H__ -DEXIT_FAILURE=1 -DEXTMODE_DISABLEPRINTF -DEXTMODE_DISABLETESTING -DEXTMODE_DISABLE_ARGS_PROCESSING=1 -DRT -DSTACK_SIZE=64 -DMW_TIMERID=1 -DMW_PRESCALAR=256 -DMW_TIMERCOUNT=46786 -DMW_SCHEDULERCOUNTER=1 -D_RTT_BAUDRATE_SERIAL0_=9600 -D_RTT_ANALOG_REF_=0
 DEFINES_BUILD_ARGS = -DONESTEPFCN=1 -DEXT_MODE=1 -DTERMFCN=1 -DMAT_FILE=0 -DMULTI_INSTANCE_CODE=0 -DINTEGER_CODE=0 -DMT=0 -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0
-DEFINES_OPTS = -DON_TARGET_WAIT_FOR_START=1 -DRT -DUSE_RTMODEL -DERT -DTID01EQ=1
-DEFINES_SKIPFORSIL = -DEXIT_FAILURE=1 -DEXTMODE_DISABLEPRINTF -DEXTMODE_DISABLETESTING -DEXTMODE_DISABLE_ARGS_PROCESSING=1 -DSTACK_SIZE=64
+DEFINES_OPTS = -DON_TARGET_WAIT_FOR_START=1 -DTID01EQ=1
+DEFINES_SKIPFORSIL = -DEXIT_FAILURE=1 -DEXTMODE_DISABLEPRINTF -DEXTMODE_DISABLETESTING -DEXTMODE_DISABLE_ARGS_PROCESSING=1 -DRT -DSTACK_SIZE=64
 DEFINES_STANDARD = -DMODEL=servo_mixed_test -DNUMST=2 -DNCSTATES=0 -DHAVESTDIO -DUNIX
 
 DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_OPTS) $(DEFINES_SKIPFORSIL) $(DEFINES_STANDARD)
@@ -240,7 +249,7 @@ DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_OPTS) $(DEFINES_SKIPFORSIL
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = $(START_DIR)/servo_mixed_test_ert_rtw/Subsystem2_266638e5_1.c $(START_DIR)/servo_mixed_test_ert_rtw/Subsystem2_266638e5_1_assembly.c $(START_DIR)/servo_mixed_test_ert_rtw/Subsystem2_266638e5_1_checkDynamics.c $(START_DIR)/servo_mixed_test_ert_rtw/Subsystem2_266638e5_1_computeConstraintError.c $(START_DIR)/servo_mixed_test_ert_rtw/Subsystem2_266638e5_1_create.c $(START_DIR)/servo_mixed_test_ert_rtw/Subsystem2_266638e5_1_deriv.c $(START_DIR)/servo_mixed_test_ert_rtw/Subsystem2_266638e5_1_gateway.c $(START_DIR)/servo_mixed_test_ert_rtw/pm_printf.c $(START_DIR)/servo_mixed_test_ert_rtw/rtGetInf.c $(START_DIR)/servo_mixed_test_ert_rtw/rtGetNaN.c $(START_DIR)/servo_mixed_test_ert_rtw/rt_backsubrr_dbl.c $(START_DIR)/servo_mixed_test_ert_rtw/rt_forwardsubrr_dbl.c $(START_DIR)/servo_mixed_test_ert_rtw/rt_lu_real.c $(START_DIR)/servo_mixed_test_ert_rtw/rt_matrixlib_dbl.c $(START_DIR)/servo_mixed_test_ert_rtw/rt_nonfinite.c $(START_DIR)/servo_mixed_test_ert_rtw/rt_sfcn_helper.c $(START_DIR)/servo_mixed_test_ert_rtw/servo_mixed_test.c rt_matrx.c rt_printf.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/updown.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_work.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/rtiostream_utils.c $(START_DIR)/Subsystem2_sf.c $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/hooks.c $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/WInterrupts.c $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/wiring.c $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/wiring_analog.c $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/wiring_digital.c $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/wiring_pulse.c $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/wiring_shift.c $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/abi.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/CDC.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/HardwareSerial.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/HardwareSerial0.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/HardwareSerial1.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/HardwareSerial2.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/HardwareSerial3.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/PluggableUSB.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/IPAddress.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/new.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/Print.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/Stream.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/Tone.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/USBCore.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/WMath.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/WString.cpp /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinotarget/registry/../src/MW_ArduinoHWInit.cpp /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinobase/src/io_wrappers.cpp /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinotarget/registry/../scheduler/src/arduinoAVRScheduler.cpp /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinotarget/registry/../src/rtiostream_interface_arduino.c /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/shared/externalmode_daemon/src/ext_svr_daemon.c /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinotarget/registry/../src/rtiostream_serial_daemon.cpp /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/shared/externalmode_daemon/src/daemon_checksum.c
+SRCS = $(START_DIR)/servo_mixed_test_ert_rtw/servo_mixed_test_e8940bbe_1.c $(START_DIR)/servo_mixed_test_ert_rtw/servo_mixed_test_e8940bbe_1_create.c $(START_DIR)/servo_mixed_test_ert_rtw/servo_mixed_test_e8940bbe_1_deriv.c $(START_DIR)/servo_mixed_test_ert_rtw/servo_mixed_test_e8940bbe_1_checkDynamics.c $(START_DIR)/servo_mixed_test_ert_rtw/servo_mixed_test_e8940bbe_1_assembly.c $(START_DIR)/servo_mixed_test_ert_rtw/servo_mixed_test_e8940bbe_1_computeConstraintError.c $(START_DIR)/servo_mixed_test_ert_rtw/servo_mixed_test_e8940bbe_1_gateway.c $(START_DIR)/servo_mixed_test_ert_rtw/pm_printf.c $(START_DIR)/servo_mixed_test_ert_rtw/rt_backsubrr_dbl.c $(START_DIR)/servo_mixed_test_ert_rtw/rt_forwardsubrr_dbl.c $(START_DIR)/servo_mixed_test_ert_rtw/rt_lu_real.c $(START_DIR)/servo_mixed_test_ert_rtw/rt_matrixlib_dbl.c $(START_DIR)/servo_mixed_test_ert_rtw/Subsystem2_266638e5_1.c $(START_DIR)/servo_mixed_test_ert_rtw/Subsystem2_266638e5_1_assembly.c $(START_DIR)/servo_mixed_test_ert_rtw/Subsystem2_266638e5_1_checkDynamics.c $(START_DIR)/servo_mixed_test_ert_rtw/Subsystem2_266638e5_1_computeConstraintError.c $(START_DIR)/servo_mixed_test_ert_rtw/Subsystem2_266638e5_1_create.c $(START_DIR)/servo_mixed_test_ert_rtw/Subsystem2_266638e5_1_deriv.c $(START_DIR)/servo_mixed_test_ert_rtw/Subsystem2_266638e5_1_gateway.c $(START_DIR)/servo_mixed_test_ert_rtw/servo_mixed_test.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/updown.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_work.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/rtiostream_utils.c $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/hooks.c $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/WInterrupts.c $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/wiring.c $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/wiring_analog.c $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/wiring_digital.c $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/wiring_pulse.c $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/wiring_shift.c $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/abi.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/CDC.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/HardwareSerial.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/HardwareSerial0.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/HardwareSerial1.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/HardwareSerial2.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/HardwareSerial3.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/PluggableUSB.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/IPAddress.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/new.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/Print.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/Stream.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/Tone.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/USBCore.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/WMath.cpp $(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino/WString.cpp /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinotarget/registry/../src/MW_ArduinoHWInit.cpp /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinobase/src/io_wrappers.cpp /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinotarget/registry/../scheduler/src/arduinoAVRScheduler.cpp /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinotarget/registry/../src/rtiostream_interface_arduino.c /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/shared/externalmode_daemon/src/ext_svr_daemon.c /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinotarget/registry/../src/rtiostream_serial_daemon.cpp /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/shared/externalmode_daemon/src/daemon_checksum.c
 
 MAIN_SRC = $(START_DIR)/servo_mixed_test_ert_rtw/ert_main.c
 
@@ -250,7 +259,7 @@ ALL_SRCS = $(SRCS) $(MAIN_SRC)
 ## OBJECTS
 ###########################################################################
 
-OBJS = Subsystem2_266638e5_1.o Subsystem2_266638e5_1_assembly.o Subsystem2_266638e5_1_checkDynamics.o Subsystem2_266638e5_1_computeConstraintError.o Subsystem2_266638e5_1_create.o Subsystem2_266638e5_1_deriv.o Subsystem2_266638e5_1_gateway.o pm_printf.o rtGetInf.o rtGetNaN.o rt_backsubrr_dbl.o rt_forwardsubrr_dbl.o rt_lu_real.o rt_matrixlib_dbl.o rt_nonfinite.o rt_sfcn_helper.o servo_mixed_test.o rt_matrx.o rt_printf.o updown.o ext_work.o rtiostream_utils.o Subsystem2_sf.o hooks.o WInterrupts.o wiring.o wiring_analog.o wiring_digital.o wiring_pulse.o wiring_shift.o abi.o CDC.o HardwareSerial.o HardwareSerial0.o HardwareSerial1.o HardwareSerial2.o HardwareSerial3.o PluggableUSB.o IPAddress.o new.o Print.o Stream.o Tone.o USBCore.o WMath.o WString.o MW_ArduinoHWInit.o io_wrappers.o arduinoAVRScheduler.o rtiostream_interface_arduino.o ext_svr_daemon.o rtiostream_serial_daemon.o daemon_checksum.o
+OBJS = servo_mixed_test_e8940bbe_1.o servo_mixed_test_e8940bbe_1_create.o servo_mixed_test_e8940bbe_1_deriv.o servo_mixed_test_e8940bbe_1_checkDynamics.o servo_mixed_test_e8940bbe_1_assembly.o servo_mixed_test_e8940bbe_1_computeConstraintError.o servo_mixed_test_e8940bbe_1_gateway.o pm_printf.o rt_backsubrr_dbl.o rt_forwardsubrr_dbl.o rt_lu_real.o rt_matrixlib_dbl.o Subsystem2_266638e5_1.o Subsystem2_266638e5_1_assembly.o Subsystem2_266638e5_1_checkDynamics.o Subsystem2_266638e5_1_computeConstraintError.o Subsystem2_266638e5_1_create.o Subsystem2_266638e5_1_deriv.o Subsystem2_266638e5_1_gateway.o servo_mixed_test.o updown.o ext_work.o rtiostream_utils.o hooks.o WInterrupts.o wiring.o wiring_analog.o wiring_digital.o wiring_pulse.o wiring_shift.o abi.o CDC.o HardwareSerial.o HardwareSerial0.o HardwareSerial1.o HardwareSerial2.o HardwareSerial3.o PluggableUSB.o IPAddress.o new.o Print.o Stream.o Tone.o USBCore.o WMath.o WString.o MW_ArduinoHWInit.o io_wrappers.o arduinoAVRScheduler.o rtiostream_interface_arduino.o ext_svr_daemon.o rtiostream_serial_daemon.o daemon_checksum.o
 
 MAIN_OBJ = ert_main.o
 
@@ -266,7 +275,7 @@ PREBUILT_OBJS =
 ## LIBRARIES
 ###########################################################################
 
-LIBS = 
+LIBS = /usr/local/MATLAB/R2016b/toolbox/physmod/sm/ssci/lib/glnxa64/sm_ssci_ert.a /usr/local/MATLAB/R2016b/toolbox/physmod/sm/core/lib/glnxa64/sm_ert.a /usr/local/MATLAB/R2016b/toolbox/physmod/pm_math/lib/glnxa64/pm_math_ert.a /usr/local/MATLAB/R2016b/toolbox/physmod/simscape/engine/sli/lib/glnxa64/ssc_sli_ert.a /usr/local/MATLAB/R2016b/toolbox/physmod/simscape/engine/core/lib/glnxa64/ssc_core_ert.a /usr/local/MATLAB/R2016b/toolbox/physmod/network_engine/lib/glnxa64/ne_ert.a /usr/local/MATLAB/R2016b/toolbox/physmod/common/math/core/lib/glnxa64/mc_ert.a /usr/local/MATLAB/R2016b/toolbox/physmod/common/external/library/lib/glnxa64/ex_ert.a /usr/local/MATLAB/R2016b/toolbox/physmod/common/foundation/core/lib/glnxa64/pm_ert.a
 
 ###########################################################################
 ## SYSTEM LIBRARIES
@@ -359,7 +368,7 @@ all : build postbuild
 build : prebuild $(PRODUCT)
 
 
-buildobj : prebuild $(OBJS) $(PREBUILT_OBJS)
+buildobj : prebuild $(OBJS) $(PREBUILT_OBJS) $(LIBS)
 	@echo "### Successfully generated all binary outputs."
 
 
@@ -395,9 +404,9 @@ execute : download
 # Create a standalone executable            
 #-------------------------------------------
 
-$(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(MAIN_OBJ)
+$(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(LIBS) $(MAIN_OBJ)
 	@echo "### Creating standalone executable "$(PRODUCT)" ..."
-	$(CPP_LD) $(CPP_LDFLAGS) -o $(PRODUCT) $(OBJS) $(MAIN_OBJ) $(SYSTEM_LIBS) $(TOOLCHAIN_LIBS)
+	$(CPP_LD) $(CPP_LDFLAGS) -o $(PRODUCT) $(OBJS) $(MAIN_OBJ) $(LIBS) $(SYSTEM_LIBS) $(TOOLCHAIN_LIBS)
 	@echo "### Created: $(PRODUCT)"
 
 
@@ -478,6 +487,138 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(MAIN_OBJ)
 
 
 %.o : $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/%.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/common/external/library/c/%.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/common/external/library/c/%.s
+	$(AS) $(ASFLAGS)  "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/common/external/library/c/%.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/common/foundation/core/c/%.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/common/foundation/core/c/%.s
+	$(AS) $(ASFLAGS)  "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/common/foundation/core/c/%.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/common/lang/core/c/%.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/common/lang/core/c/%.s
+	$(AS) $(ASFLAGS)  "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/common/lang/core/c/%.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/common/math/core/c/%.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/common/math/core/c/%.s
+	$(AS) $(ASFLAGS)  "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/common/math/core/c/%.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/network_engine/c/%.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/network_engine/c/%.s
+	$(AS) $(ASFLAGS)  "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/network_engine/c/%.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/pm_math/c/%.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/pm_math/c/%.s
+	$(AS) $(ASFLAGS)  "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/pm_math/c/%.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/simscape/compiler/core/c/%.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/simscape/compiler/core/c/%.s
+	$(AS) $(ASFLAGS)  "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/simscape/compiler/core/c/%.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/simscape/engine/core/c/%.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/simscape/engine/core/c/%.s
+	$(AS) $(ASFLAGS)  "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/simscape/engine/core/c/%.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/simscape/engine/sli/c/%.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/simscape/engine/sli/c/%.s
+	$(AS) $(ASFLAGS)  "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/simscape/engine/sli/c/%.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/sm/core/c/%.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/sm/core/c/%.s
+	$(AS) $(ASFLAGS)  "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/sm/core/c/%.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/sm/ssci/c/%.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/sm/ssci/c/%.s
+	$(AS) $(ASFLAGS)  "$@" "$<"
+
+
+%.o : $(MATLAB_ROOT)/toolbox/physmod/sm/ssci/c/%.cpp
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
@@ -635,6 +776,55 @@ rtiostream_serial_daemon.o : /root/Documents/MATLAB/SupportPackages/R2016b/toolb
 
 daemon_checksum.o : /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/shared/externalmode_daemon/src/daemon_checksum.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+#------------------------
+# BUILDABLE LIBRARIES
+#------------------------
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/sm/ssci/lib/glnxa64/sm_ssci_ert.a : $(LIBSM_SSCI_ERT_OBJS)
+	@echo "### Creating static library $@ ..."
+	$(AR) $(ARFLAGS)  $@ $(LIBSM_SSCI_ERT_OBJS)
+
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/sm/core/lib/glnxa64/sm_ert.a : $(LIBSM_ERT_OBJS)
+	@echo "### Creating static library $@ ..."
+	$(AR) $(ARFLAGS)  $@ $(LIBSM_ERT_OBJS)
+
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/pm_math/lib/glnxa64/pm_math_ert.a : $(LIBPM_MATH_ERT_OBJS)
+	@echo "### Creating static library $@ ..."
+	$(AR) $(ARFLAGS)  $@ $(LIBPM_MATH_ERT_OBJS)
+
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/simscape/engine/sli/lib/glnxa64/ssc_sli_ert.a : $(LIBSSC_SLI_ERT_OBJS)
+	@echo "### Creating static library $@ ..."
+	$(AR) $(ARFLAGS)  $@ $(LIBSSC_SLI_ERT_OBJS)
+
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/simscape/engine/core/lib/glnxa64/ssc_core_ert.a : $(LIBSSC_CORE_ERT_OBJS)
+	@echo "### Creating static library $@ ..."
+	$(AR) $(ARFLAGS)  $@ $(LIBSSC_CORE_ERT_OBJS)
+
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/network_engine/lib/glnxa64/ne_ert.a : $(LIBNE_ERT_OBJS)
+	@echo "### Creating static library $@ ..."
+	$(AR) $(ARFLAGS)  $@ $(LIBNE_ERT_OBJS)
+
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/common/math/core/lib/glnxa64/mc_ert.a : $(LIBMC_ERT_OBJS)
+	@echo "### Creating static library $@ ..."
+	$(AR) $(ARFLAGS)  $@ $(LIBMC_ERT_OBJS)
+
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/common/external/library/lib/glnxa64/ex_ert.a : $(LIBEX_ERT_OBJS)
+	@echo "### Creating static library $@ ..."
+	$(AR) $(ARFLAGS)  $@ $(LIBEX_ERT_OBJS)
+
+
+/usr/local/MATLAB/R2016b/toolbox/physmod/common/foundation/core/lib/glnxa64/pm_ert.a : $(LIBPM_ERT_OBJS)
+	@echo "### Creating static library $@ ..."
+	$(AR) $(ARFLAGS)  $@ $(LIBPM_ERT_OBJS)
 
 
 ###########################################################################

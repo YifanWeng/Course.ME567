@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'servo_mixed_test'.
  *
- * Model version                  : 1.45
+ * Model version                  : 1.46
  * Simulink Coder version         : 8.11 (R2016b) 25-Aug-2016
- * C/C++ source code generated on : Mon Apr 10 23:33:06 2017
+ * C/C++ source code generated on : Tue Apr 11 02:57:35 2017
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Atmel->AVR
@@ -21,11 +21,27 @@
 
 #ifndef RTW_HEADER_servo_mixed_test_types_h_
 #define RTW_HEADER_servo_mixed_test_types_h_
-#if !defined(MATLAB_MEX_FILE)
-#undef S_FUNCTION_NAME
-#include "Subsystem2_sfcn_rtw/Subsystem2_sf.h"
-#include "Subsystem2_sfcn_rtw/Subsystem2_sf_private.h"
-#endif
+#include "rtwtypes.h"
+#include "multiword_types.h"
+
+/* Custom Type definition for MATLAB Function: '<S1>/Inverse Kinematics1' */
+#ifndef struct_tag_sy4LJ1pLMocUdPsrBnA99ZG
+#define struct_tag_sy4LJ1pLMocUdPsrBnA99ZG
+
+struct tag_sy4LJ1pLMocUdPsrBnA99ZG
+{
+  real_T q0[6];
+  real_T qd[6];
+};
+
+#endif                                 /*struct_tag_sy4LJ1pLMocUdPsrBnA99ZG*/
+
+#ifndef typedef_sy4LJ1pLMocUdPsrBnA99ZG
+#define typedef_sy4LJ1pLMocUdPsrBnA99ZG
+
+typedef struct tag_sy4LJ1pLMocUdPsrBnA99ZG sy4LJ1pLMocUdPsrBnA99ZG;
+
+#endif                                 /*typedef_sy4LJ1pLMocUdPsrBnA99ZG*/
 
 /* Forward declaration for rtModel */
 typedef struct tag_RTM RT_MODEL;

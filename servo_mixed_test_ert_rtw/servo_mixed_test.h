@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'servo_mixed_test'.
  *
- * Model version                  : 1.45
+ * Model version                  : 1.46
  * Simulink Coder version         : 8.11 (R2016b) 25-Aug-2016
- * C/C++ source code generated on : Mon Apr 10 23:33:06 2017
+ * C/C++ source code generated on : Tue Apr 11 02:57:35 2017
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Atmel->AVR
@@ -21,16 +21,21 @@
 
 #ifndef RTW_HEADER_servo_mixed_test_h_
 #define RTW_HEADER_servo_mixed_test_h_
-#include <stddef.h>
-#include <string.h>
+#include <math.h>
 #include <float.h>
+#include <string.h>
+#include <stddef.h>
 #ifndef servo_mixed_test_COMMON_INCLUDES_
 # define servo_mixed_test_COMMON_INCLUDES_
 #include "rtwtypes.h"
-#include "simstruc.h"
-#include "fixedpoint.h"
+#include "rtw_extmode.h"
+#include "sysran_types.h"
+#include "rtw_continuous.h"
+#include "rtw_solver.h"
 #include "dt_info.h"
 #include "ext_work.h"
+#include "nesl_rtw.h"
+#include "servo_mixed_test_e8940bbe_1_gateway.h"
 #endif                                 /* servo_mixed_test_COMMON_INCLUDES_ */
 
 #include "servo_mixed_test_types.h"
@@ -38,52 +43,14 @@
 /* Shared type includes */
 #include "multiword_types.h"
 #include "MW_target_hardware_resources.h"
-#include "rt_sfcn_helper.h"
-#include "rt_nonfinite.h"
 
 /* Macros for accessing real-time model data structure */
-#ifndef rtmGetBlkStateChangeFlag
-# define rtmGetBlkStateChangeFlag(rtm) ((rtm)->blkStateChange)
-#endif
-
-#ifndef rtmSetBlkStateChangeFlag
-# define rtmSetBlkStateChangeFlag(rtm, val) ((rtm)->blkStateChange = (val))
-#endif
-
-#ifndef rtmGetDerivCacheNeedsReset
-# define rtmGetDerivCacheNeedsReset(rtm) ((rtm)->derivCacheNeedsReset)
-#endif
-
-#ifndef rtmSetDerivCacheNeedsReset
-# define rtmSetDerivCacheNeedsReset(rtm, val) ((rtm)->derivCacheNeedsReset = (val))
-#endif
-
 #ifndef rtmGetFinalTime
 # define rtmGetFinalTime(rtm)          ((rtm)->Timing.tFinal)
 #endif
 
 #ifndef rtmGetRTWExtModeInfo
 # define rtmGetRTWExtModeInfo(rtm)     ((rtm)->extModeInfo)
-#endif
-
-#ifndef rtmGetSampleHitArray
-# define rtmGetSampleHitArray(rtm)     ((rtm)->Timing.sampleHitArray)
-#endif
-
-#ifndef rtmGetStepSize
-# define rtmGetStepSize(rtm)           ((rtm)->Timing.stepSize)
-#endif
-
-#ifndef rtmGetZCCacheNeedsReset
-# define rtmGetZCCacheNeedsReset(rtm)  ((rtm)->zCCacheNeedsReset)
-#endif
-
-#ifndef rtmSetZCCacheNeedsReset
-# define rtmSetZCCacheNeedsReset(rtm, val) ((rtm)->zCCacheNeedsReset = (val))
-#endif
-
-#ifndef rtmGet_TimeOfLastOutput
-# define rtmGet_TimeOfLastOutput(rtm)  ((rtm)->Timing.timeOfLastOutput)
 #endif
 
 #ifndef rtmGetErrorStatus
@@ -114,82 +81,66 @@
 # define rtmGetTFinal(rtm)             ((rtm)->Timing.tFinal)
 #endif
 
-#ifndef rtmGetTStart
-# define rtmGetTStart(rtm)             ((rtm)->Timing.tStart)
-#endif
-
-#ifndef rtmGetTimeOfLastOutput
-# define rtmGetTimeOfLastOutput(rtm)   ((rtm)->Timing.timeOfLastOutput)
-#endif
-
 #define servo_mixed_test_M             (rtM)
+
+/* Block signals (auto storage) */
+typedef struct {
+  real_T dv0[28];
+  real_T dv1[28];
+  real_T yd_simu[6];
+  NeModelParameters expl_temp;
+  real_T INPUT_3_1_1[4];               /* '<S24>/INPUT_3_1_1' */
+  real_T INPUT_4_1_1[4];               /* '<S24>/INPUT_4_1_1' */
+  real_T INPUT_5_1_1[4];               /* '<S24>/INPUT_5_1_1' */
+  real_T INPUT_6_1_1[4];               /* '<S24>/INPUT_6_1_1' */
+  real_T INPUT_1_1_1[4];               /* '<S24>/INPUT_1_1_1' */
+  real_T INPUT_7_1_1[4];               /* '<S24>/INPUT_7_1_1' */
+  real_T y_simu[6];                    /* '<S1>/Inverse Kinematics1' */
+  int_T iv0[8];
+  NeParameterBundle expl_temp_m;
+  real_T Clock;                        /* '<S1>/Clock' */
+  real_T Gain;                         /* '<S13>/Gain' */
+  real_T INPUT_2_1_1[4];               /* '<S24>/INPUT_2_1_1' */
+  real_T s;                            /* '<S1>/Chart' */
+  real_T dt;                           /* '<S1>/Chart' */
+  real_T s_old;                        /* '<S1>/Chart' */
+  real_T modelParameters_mSolverToleranc;
+} B;
 
 /* Block states (auto storage) for system '<Root>' */
 typedef struct {
-  real_T Subsystem2_sfcn_DWORK0[2];    /* '<S1>/Subsystem2_sfcn' */
-  real_T Subsystem2_sfcn_DWORK1[2];    /* '<S1>/Subsystem2_sfcn' */
-  real_T Subsystem2_sfcn_DWORK2[2];    /* '<S1>/Subsystem2_sfcn' */
-  real_T Subsystem2_sfcn_DWORK3[2];    /* '<S1>/Subsystem2_sfcn' */
-  real_T Subsystem2_sfcn_DWORK4[2];    /* '<S1>/Subsystem2_sfcn' */
-  real_T Subsystem2_sfcn_DWORK5[2];    /* '<S1>/Subsystem2_sfcn' */
-  real_T Subsystem2_sfcn_DWORK6[2];    /* '<S1>/Subsystem2_sfcn' */
-  real_T Subsystem2_sfcn_DWORK7;       /* '<S1>/Subsystem2_sfcn' */
-  real_T Subsystem2_sfcn_DWORK8;       /* '<S1>/Subsystem2_sfcn' */
-  real_T Subsystem2_sfcn_DWORK9;       /* '<S1>/Subsystem2_sfcn' */
-  void* Subsystem2_sfcn_DWORK10;       /* '<S1>/Subsystem2_sfcn' */
-  void* Subsystem2_sfcn_DWORK11;       /* '<S1>/Subsystem2_sfcn' */
-  void* Subsystem2_sfcn_DWORK12;       /* '<S1>/Subsystem2_sfcn' */
-  void* Subsystem2_sfcn_DWORK13;       /* '<S1>/Subsystem2_sfcn' */
-  void* Subsystem2_sfcn_DWORK14;       /* '<S1>/Subsystem2_sfcn' */
-  void* Subsystem2_sfcn_DWORK15;       /* '<S1>/Subsystem2_sfcn' */
-  void* Subsystem2_sfcn_DWORK16;       /* '<S1>/Subsystem2_sfcn' */
-  void* Subsystem2_sfcn_DWORK17;       /* '<S1>/Subsystem2_sfcn' */
-  void* Subsystem2_sfcn_DWORK18;       /* '<S1>/Subsystem2_sfcn' */
-  void* Subsystem2_sfcn_DWORK19;       /* '<S1>/Subsystem2_sfcn' */
-  uint8_T Subsystem2_sfcn_DWORK20;     /* '<S1>/Subsystem2_sfcn' */
-  uint8_T Subsystem2_sfcn_DWORK21;     /* '<S1>/Subsystem2_sfcn' */
-  boolean_T Subsystem2_sfcn_DWORK22;   /* '<S1>/Subsystem2_sfcn' */
-  boolean_T Subsystem2_sfcn_DWORK23;   /* '<S1>/Subsystem2_sfcn' */
+  real_T INPUT_2_1_1_discrete[2];      /* '<S24>/INPUT_2_1_1' */
+  real_T INPUT_3_1_1_discrete[2];      /* '<S24>/INPUT_3_1_1' */
+  real_T INPUT_4_1_1_discrete[2];      /* '<S24>/INPUT_4_1_1' */
+  real_T INPUT_5_1_1_discrete[2];      /* '<S24>/INPUT_5_1_1' */
+  real_T INPUT_6_1_1_discrete[2];      /* '<S24>/INPUT_6_1_1' */
+  real_T INPUT_1_1_1_discrete[2];      /* '<S24>/INPUT_1_1_1' */
+  real_T INPUT_7_1_1_discrete[2];      /* '<S24>/INPUT_7_1_1' */
+  real_T t2;                           /* '<S1>/Chart' */
+  real_T t1;                           /* '<S1>/Chart' */
+  real_T t3;                           /* '<S1>/Chart' */
+  void* SINK_1_Simulator;              /* '<S24>/SINK_1' */
+  void* SINK_1_SimulationData;         /* '<S24>/SINK_1' */
+  void* SINK_1_DiagnosticManager;      /* '<S24>/SINK_1' */
+  void* SINK_1_Logger;                 /* '<S24>/SINK_1' */
+  void* SINK_1_SampleTimeIdx;          /* '<S24>/SINK_1' */
+  void* STATE_1_Simulator;             /* '<S24>/STATE_1' */
+  void* STATE_1_SimulationData;        /* '<S24>/STATE_1' */
+  void* STATE_1_DiagnosticManager;     /* '<S24>/STATE_1' */
+  void* STATE_1_Logger;                /* '<S24>/STATE_1' */
+  void* STATE_1_SampleTimeIdx;         /* '<S24>/STATE_1' */
+  int32_T sfEvent;                     /* '<S1>/Chart' */
+  uint8_T is_active_c3_servo_mixed_test;/* '<S1>/Chart' */
+  uint8_T is_c3_servo_mixed_test;      /* '<S1>/Chart' */
+  boolean_T SINK_1_CallSimulatorOutput;/* '<S24>/SINK_1' */
+  boolean_T STATE_1_CallSimulatorOutput;/* '<S24>/STATE_1' */
 } DW;
 
 /* Real-time Model Data Structure */
 struct tag_RTM {
-  struct SimStruct_tag * *childSfunctions;
   const char_T *errorStatus;
-  SS_SimMode simMode;
   RTWExtModeInfo *extModeInfo;
   RTWSolverInfo solverInfo;
-  RTWSolverInfo *solverInfoPtr;
-  void *sfcnInfo;
-
-  /*
-   * NonInlinedSFcns:
-   * The following substructure contains information regarding
-   * non-inlined s-functions used in the model.
-   */
-  struct {
-    RTWSfcnInfo sfcnInfo;
-    time_T *taskTimePtrs[2];
-    SimStruct childSFunctions[1];
-    SimStruct *childSFunctionPtrs[1];
-    struct _ssBlkInfo2 blkInfo2[1];
-    struct _ssSFcnModelMethods2 methods2[1];
-    struct _ssSFcnModelMethods3 methods3[1];
-    struct _ssSFcnModelMethods4 methods4[1];
-    struct _ssStatesInfo2 statesInfo2[1];
-    ssPeriodicStatesInfo periodicStatesInfo[1];
-    struct {
-      time_T sfcnPeriod[2];
-      time_T sfcnOffset[2];
-      int_T sfcnTsMap[2];
-      struct _ssDWorkRecord dWork[24];
-      struct _ssDWorkAuxRecord dWorkAux[24];
-    } Sfcn0;
-  } NonInlinedSFcns;
-
-  boolean_T zCCacheNeedsReset;
-  boolean_T derivCacheNeedsReset;
-  boolean_T blkStateChange;
 
   /*
    * Sizes:
@@ -199,22 +150,6 @@ struct tag_RTM {
    */
   struct {
     uint32_T checksums[4];
-    uint32_T options;
-    int_T numContStates;
-    int_T numU;
-    int_T numY;
-    int_T numSampTimes;
-    int_T numBlocks;
-    int_T numBlockIO;
-    int_T numBlockPrms;
-    int_T numDwork;
-    int_T numSFcnPrms;
-    int_T numSFcns;
-    int_T numIports;
-    int_T numOports;
-    int_T numNonSampZCs;
-    int_T sysDirFeedThru;
-    int_T rtwGenSfcn;
   } Sizes;
 
   /*
@@ -232,30 +167,19 @@ struct tag_RTM {
    * the timing information for the model.
    */
   struct {
-    time_T stepSize;
     uint32_T clockTick0;
     time_T stepSize0;
     uint32_T clockTick1;
-    time_T stepSize1;
-    time_T tStart;
     time_T tFinal;
-    time_T timeOfLastOutput;
     SimTimeStep simTimeStep;
     boolean_T stopRequestedFlag;
-    time_T *sampleTimes;
-    time_T *offsetTimes;
-    int_T *sampleTimeTaskIDPtr;
-    int_T *sampleHits;
-    int_T *perTaskSampleHits;
     time_T *t;
-    time_T sampleTimesArray[2];
-    time_T offsetTimesArray[2];
-    int_T sampleTimeTaskIDArray[2];
-    int_T sampleHitArray[2];
-    int_T perTaskSampleHitsArray[4];
     time_T tArray[2];
   } Timing;
 };
+
+/* Block signals (auto storage) */
+extern B rtB;
 
 /* Block states (auto storage) */
 extern DW rtDW;
@@ -267,6 +191,12 @@ extern void servo_mixed_test_terminate(void);
 
 /* Real-time Model object */
 extern RT_MODEL *const rtM;
+
+/*-
+ * These blocks were eliminated from the model due to optimizations:
+ *
+ * Block '<S13>/Gain1' : Eliminated nontunable gain of 1
+ */
 
 /*-
  * The generated code includes comments that allow you to trace directly
@@ -283,7 +213,44 @@ extern RT_MODEL *const rtM;
  * Here is the system hierarchy for this model
  *
  * '<Root>' : 'servo_mixed_test'
- * '<S1>'   : 'servo_mixed_test/Subsystem1'
+ * '<S1>'   : 'servo_mixed_test/Subsystem'
+ * '<S2>'   : 'servo_mixed_test/Subsystem1'
+ * '<S3>'   : 'servo_mixed_test/Subsystem/Chart'
+ * '<S4>'   : 'servo_mixed_test/Subsystem/Inverse Kinematics1'
+ * '<S5>'   : 'servo_mixed_test/Subsystem1/Simulation'
+ * '<S6>'   : 'servo_mixed_test/Subsystem1/Simulation/Grabber'
+ * '<S7>'   : 'servo_mixed_test/Subsystem1/Simulation/Rotatation Joint 1'
+ * '<S8>'   : 'servo_mixed_test/Subsystem1/Simulation/Rotatation Joint 2'
+ * '<S9>'   : 'servo_mixed_test/Subsystem1/Simulation/Rotatation Joint 3'
+ * '<S10>'  : 'servo_mixed_test/Subsystem1/Simulation/Rotatation Joint 4'
+ * '<S11>'  : 'servo_mixed_test/Subsystem1/Simulation/Rotatation Joint 5'
+ * '<S12>'  : 'servo_mixed_test/Subsystem1/Simulation/Solver Configuration'
+ * '<S13>'  : 'servo_mixed_test/Subsystem1/Simulation/Unit Converter'
+ * '<S14>'  : 'servo_mixed_test/Subsystem1/Simulation/link1_1'
+ * '<S15>'  : 'servo_mixed_test/Subsystem1/Simulation/link1_2'
+ * '<S16>'  : 'servo_mixed_test/Subsystem1/Simulation/link2'
+ * '<S17>'  : 'servo_mixed_test/Subsystem1/Simulation/link3'
+ * '<S18>'  : 'servo_mixed_test/Subsystem1/Simulation/link4'
+ * '<S19>'  : 'servo_mixed_test/Subsystem1/Simulation/link5_2'
+ * '<S20>'  : 'servo_mixed_test/Subsystem1/Simulation/Grabber/grab_elem1'
+ * '<S21>'  : 'servo_mixed_test/Subsystem1/Simulation/Grabber/grab_elem2'
+ * '<S22>'  : 'servo_mixed_test/Subsystem1/Simulation/Grabber/grab_elem3'
+ * '<S23>'  : 'servo_mixed_test/Subsystem1/Simulation/Grabber/grab_elem4'
+ * '<S24>'  : 'servo_mixed_test/Subsystem1/Simulation/Solver Configuration/EVAL_KEY'
+ * '<S25>'  : 'servo_mixed_test/Subsystem1/Simulation/Unit Converter/Simulink-PS Converter'
+ * '<S26>'  : 'servo_mixed_test/Subsystem1/Simulation/Unit Converter/Simulink-PS Converter1'
+ * '<S27>'  : 'servo_mixed_test/Subsystem1/Simulation/Unit Converter/Simulink-PS Converter2'
+ * '<S28>'  : 'servo_mixed_test/Subsystem1/Simulation/Unit Converter/Simulink-PS Converter3'
+ * '<S29>'  : 'servo_mixed_test/Subsystem1/Simulation/Unit Converter/Simulink-PS Converter4'
+ * '<S30>'  : 'servo_mixed_test/Subsystem1/Simulation/Unit Converter/Simulink-PS Converter5'
+ * '<S31>'  : 'servo_mixed_test/Subsystem1/Simulation/Unit Converter/Simulink-PS Converter6'
+ * '<S32>'  : 'servo_mixed_test/Subsystem1/Simulation/Unit Converter/Simulink-PS Converter/EVAL_KEY'
+ * '<S33>'  : 'servo_mixed_test/Subsystem1/Simulation/Unit Converter/Simulink-PS Converter1/EVAL_KEY'
+ * '<S34>'  : 'servo_mixed_test/Subsystem1/Simulation/Unit Converter/Simulink-PS Converter2/EVAL_KEY'
+ * '<S35>'  : 'servo_mixed_test/Subsystem1/Simulation/Unit Converter/Simulink-PS Converter3/EVAL_KEY'
+ * '<S36>'  : 'servo_mixed_test/Subsystem1/Simulation/Unit Converter/Simulink-PS Converter4/EVAL_KEY'
+ * '<S37>'  : 'servo_mixed_test/Subsystem1/Simulation/Unit Converter/Simulink-PS Converter5/EVAL_KEY'
+ * '<S38>'  : 'servo_mixed_test/Subsystem1/Simulation/Unit Converter/Simulink-PS Converter6/EVAL_KEY'
  */
 #endif                                 /* RTW_HEADER_servo_mixed_test_h_ */
 

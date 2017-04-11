@@ -7,9 +7,9 @@
  *
  * Code generation for model "servo_mixed_test".
  *
- * Model version              : 1.45
+ * Model version              : 1.46
  * Simulink Coder version : 8.11 (R2016b) 25-Aug-2016
- * C source code generated on : Mon Apr 10 23:33:06 2017
+ * C source code generated on : Tue Apr 11 02:57:35 2017
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Atmel->AVR
@@ -59,18 +59,25 @@ static const char_T * rtDataTypeNames[] = {
 
 /* data type transitions for block I/O structure */
 static DataTypeTransition rtBTransitions[] = {
-  { (char_T *)(&rtDW.Subsystem2_sfcn_DWORK0[0]), 0, 0, 17 },
+  { (char_T *)(&rtB.INPUT_3_1_1[0]), 0, 0, 30 },
 
-  { (char_T *)(&rtDW.Subsystem2_sfcn_DWORK10), 11, 0, 10 },
+  { (char_T *)(&rtB.Clock), 0, 0, 9 }
+  ,
 
-  { (char_T *)(&rtDW.Subsystem2_sfcn_DWORK20), 3, 0, 2 },
+  { (char_T *)(&rtDW.INPUT_2_1_1_discrete[0]), 0, 0, 17 },
 
-  { (char_T *)(&rtDW.Subsystem2_sfcn_DWORK22), 8, 0, 2 }
+  { (char_T *)(&rtDW.SINK_1_Simulator), 11, 0, 10 },
+
+  { (char_T *)(&rtDW.sfEvent), 6, 0, 1 },
+
+  { (char_T *)(&rtDW.is_active_c3_servo_mixed_test), 3, 0, 2 },
+
+  { (char_T *)(&rtDW.SINK_1_CallSimulatorOutput), 8, 0, 2 }
 };
 
 /* data type transition table for block I/O structure */
 static DataTypeTransitionTable rtBTransTable = {
-  4U,
+  7U,
   rtBTransitions
 };
 
