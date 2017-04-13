@@ -24,7 +24,7 @@ order = [1;-1;1;1;1;1]; % the rotation direction of real robot versus the model
 
 % while(t < 10)
 % qd = (qd-0.5).*order/pi;
-xd = [0;20;0;0;0;0];%[6*sin(2*t);6*cos(2*t)+15;23;0;0;0];
+xd = [5;20;15;0;0;0];%[6*sin(2*t);6*cos(2*t)+15;23;0;0;0];
 q_star = InverseKinetics(xd);
 q = q_star/(pi);
 % qd = order.*q+0.5; % the joint angular from inverse kinematics
