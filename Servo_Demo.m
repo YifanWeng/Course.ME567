@@ -33,15 +33,16 @@ t=0;
 order = [1;-1;1;1;1];
 % qd = q0(1:5);
 
-% while(t < 10)
+while(t < 10)
 % qd = (qd-0.5).*order/pi;
-x = [0;10;25;0;0;0];%[6*sin(2*t);6*cos(2*t)+15;23;0;0;0];
-q_star = InverseKinetics(x)
+x = [5*sin(5*t);5*cos(5*t)+15;23;0;0;0];%[10;25;25;0;0;0];%[
+q_star = InverseKinetics_rd(x); % reduced version of Inverse Kinematics
 q = q_star/(pi);
 qd = order.*q+0.5; % the joint angular from inverse kinematics
 qd(qd<0) = 0;qd(qd>1)=1; % saturation
 qd
-%
+
+%%
 for i = 1:5
     eval(['s = s',num2str(i),';']);
     p_r = readPosition(s);
@@ -49,7 +50,7 @@ for i = 1:5
 end
 % pause();
 t = t+dt;
-% end
+end
 
 %%
 q0 = [0.5;0.6;0.5;0.5;0.5;0.5];

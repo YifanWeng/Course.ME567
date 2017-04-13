@@ -1,0 +1,14 @@
+wiring_pulse.o: \
+ /root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/cores/arduino/wiring_pulse.c \
+ /root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/cores/arduino/wiring_private.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/cores/arduino/Arduino.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/cores/arduino/binary.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/variants/standard/pins_arduino.h
+
+/root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/cores/arduino/wiring_private.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/cores/arduino/Arduino.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/cores/arduino/binary.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/variants/standard/pins_arduino.h:

@@ -1,0 +1,43 @@
+ert_main.o: ert_main.c servo_control.h rtwtypes.h \
+ /usr/local/MATLAB/R2016b/simulink/include/rtw_continuous.h \
+ /media/pec/DataOne/PROG/EECS567/proj/Course.ME567/servo_control_ert_rtw/rtwtypes.h \
+ /usr/local/MATLAB/R2016b/simulink/include/rtw_solver.h \
+ /usr/local/MATLAB/R2016b/simulink/include/rtw_continuous.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinobase/blocks/sfcn/include/arduino_servowrite_lct.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinobase/include/io_wrappers.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinobase/blocks/sfcn/include/arduino_blocks_abstraction.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/cores/arduino/Arduino.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/cores/arduino/binary.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/variants/standard/pins_arduino.h \
+ servo_control_types.h MW_target_hardware_resources.h \
+ /root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinotarget/registry/../scheduler/include/arduinoAVRScheduler.h
+
+servo_control.h:
+
+rtwtypes.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/rtw_continuous.h:
+
+/media/pec/DataOne/PROG/EECS567/proj/Course.ME567/servo_control_ert_rtw/rtwtypes.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/rtw_solver.h:
+
+/usr/local/MATLAB/R2016b/simulink/include/rtw_continuous.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinobase/blocks/sfcn/include/arduino_servowrite_lct.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinobase/include/io_wrappers.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinobase/blocks/sfcn/include/arduino_blocks_abstraction.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/cores/arduino/Arduino.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/cores/arduino/binary.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/3P.instrset/arduinoide.instrset/arduino-1.6.13/hardware/arduino/avr/variants/standard/pins_arduino.h:
+
+servo_control_types.h:
+
+MW_target_hardware_resources.h:
+
+/root/Documents/MATLAB/SupportPackages/R2016b/toolbox/target/supportpackages/arduinotarget/registry/../scheduler/include/arduinoAVRScheduler.h:
